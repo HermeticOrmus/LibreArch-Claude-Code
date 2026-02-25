@@ -1,46 +1,50 @@
-# Api Gateway
+# API Gateway Plugin
 
-API gateway patterns, routing, rate limiting, aggregation
+> Patterns for designing and implementing API gateways that handle routing, rate limiting, authentication, request aggregation, and protocol translation.
 
-## What's Included
+## Overview
+
+The API Gateway plugin provides expertise in the gateway pattern -- a single entry point that sits between clients and backend services. API gateways handle cross-cutting concerns (authentication, rate limiting, logging, CORS) so individual services do not have to. This plugin covers gateway design decisions, routing strategies, and the trade-offs between different gateway architectures.
+
+## Contents
 
 ### Agents
-- **Api Gateway Architect** - Specialized agent for API gateway patterns, routing, rate limiting, aggregation
+
+| Agent | File | Purpose |
+|-------|------|---------|
+| API Gateway Architect | `agents/api-gateway-architect/AGENT.md` | Designs gateway architectures, routing strategies, and cross-cutting concern implementations. |
 
 ### Commands
-- `/api-gateway` - Quick-access command for api-gateway workflows
+
+| Command | File | Purpose |
+|---------|------|---------|
+| `/api-gateway` | `commands/api-gateway/COMMAND.md` | Analyze or design an API gateway for a given system with routing, rate limiting, and security patterns. |
 
 ### Skills
-- **Gateway Patterns** - Pattern library and knowledge base for api-gateway
 
-## Quick Start
+| Skill | Directory | Purpose |
+|-------|-----------|---------|
+| Gateway Patterns | `skills/gateway-patterns/SKILL.md` | Knowledge base of gateway patterns: BFF, aggregation, protocol translation, edge functions. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## Usage
 
-## Usage Examples
-
-```
-# Use the command directly
-/api-gateway analyze
-
-# Use the command with specific input
-/api-gateway generate --context "your project"
-
-# Reference patterns from the skill
-"Apply gateway-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for api-gateway
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
+Use `/api-gateway` when designing a new gateway layer or evaluating whether your system needs one. The agent helps with gateway type selection (API gateway vs BFF vs service mesh ingress), routing strategy, and cross-cutting concern placement.
 
 ## Related Plugins
 
-Check the main README for related plugins in this collection.
+| Plugin | Relationship |
+|--------|-------------|
+| `microservices` | Gateways are commonly used with microservices architectures |
+| `service-discovery` | Gateways need to discover backend services |
+| `circuit-breaker` | Gateways implement resilience patterns for downstream calls |
+| `caching-strategies` | Gateways often implement response caching |
+| `scalability-patterns` | Gateway scaling and load distribution |
+
+## When to Use an API Gateway
+
+| Scenario | Recommendation |
+|----------|---------------|
+| Multiple clients (web, mobile, IoT) with different needs | BFF pattern per client type |
+| Cross-cutting concerns (auth, rate limiting) duplicated across services | Centralized gateway |
+| Simple system with 2-3 services | Probably unnecessary -- use a load balancer |
+| Need protocol translation (REST to gRPC) | Gateway with protocol adapters |

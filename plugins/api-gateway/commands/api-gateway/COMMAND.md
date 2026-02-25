@@ -1,87 +1,62 @@
 # /api-gateway
 
-A quick-access command for api-gateway workflows in Claude Code.
+> Design or analyze an API gateway architecture for a system, including routing, security, rate limiting, and cross-cutting concern placement.
 
 ## Trigger
 
-`/api-gateway [action] [options]`
+Use this command when:
+- Designing a new API gateway for a microservices architecture
+- Evaluating whether your system needs a gateway
+- Refactoring gateway routing or cross-cutting concerns
+- Adding a Backend for Frontend (BFF) pattern
+- Migrating from a monolith to services and need an API layer
 
 ## Input
 
-### Actions
-- `analyze` - Analyze existing api-gateway implementation
-- `generate` - Generate new api-gateway artifacts
-- `improve` - Suggest improvements to current implementation
-- `validate` - Check implementation against best practices
-- `document` - Generate documentation for api-gateway artifacts
+Required:
+- **System description**: What services exist, what clients consume them, current architecture
 
-### Options
-- `--context <path>` - Specify the file or directory to operate on
-- `--format <type>` - Output format (markdown, json, yaml)
-- `--verbose` - Include detailed explanations
-- `--dry-run` - Preview changes without applying them
+Optional:
+- **Client types**: Web, mobile, third-party, IoT -- different clients may need different gateways
+- **Traffic patterns**: Expected request volume, burst patterns, geographic distribution
+- **Security requirements**: Authentication method, authorization model, API key management
+- **Technology constraints**: Preferred gateway technology, cloud provider, existing infrastructure
 
 ## Process
 
-### Step 1: Context Gathering
-- Read relevant files and configuration
-- Identify the current state of api-gateway artifacts
-- Determine applicable standards and conventions
+### Step 1: Client Analysis
+1. Identify all client types and their API consumption patterns
+2. Determine if different clients need different API shapes (BFF candidates)
+3. Map protocol requirements (REST, GraphQL, WebSocket, gRPC)
 
-### Step 2: Analysis
-- Evaluate against gateway-patterns patterns
-- Identify gaps, issues, and opportunities
-- Prioritize findings by impact and effort
+### Step 2: Gateway Architecture Selection
+1. Evaluate: single gateway vs BFF vs no gateway
+2. Consider team ownership: who owns the gateway, who owns the routes
+3. Assess build vs buy decision for gateway technology
 
-### Step 3: Execution
-- Apply the requested action
-- Generate or modify artifacts as needed
-- Validate changes against requirements
+### Step 3: Routing Design
+1. Map all routes to backend services
+2. Define versioning strategy
+3. Design path conventions
 
-### Step 4: Output
-- Present results in the requested format
-- Include actionable next steps
-- Flag any items requiring human decision
+### Step 4: Cross-Cutting Concerns
+1. Define authentication flow at the gateway
+2. Design rate limiting strategy per client and per endpoint
+3. Plan request/response logging and tracing
+4. Configure CORS, compression, caching headers
+
+### Step 5: Resilience & Operations
+1. Configure timeouts and circuit breakers for each backend
+2. Define fallback behavior for service failures
+3. Plan gateway scaling and deployment strategy
+4. Design health checks and monitoring
 
 ## Output
 
-### Success
-```
-## Api Gateway - [Action] Complete
-
-### Changes Made
-- [List of changes]
-
-### Validation
-- [Checks passed]
-
-### Next Steps
-- [Recommended follow-up actions]
-```
-
-### Error
-```
-## Api Gateway - [Action] Failed
-
-### Issue
-[Description of the problem]
-
-### Suggested Fix
-[How to resolve the issue]
-```
+A complete gateway design document with routing table, security configuration, rate limiting strategy, failure handling, and deployment plan.
 
 ## Examples
 
-```bash
-# Analyze current implementation
-/api-gateway analyze
+**Input:** "We have 5 microservices (users, orders, products, payments, notifications) serving a web app and a mobile app. The mobile app needs different response shapes."
 
-# Generate new artifacts
-/api-gateway generate --context ./src
-
-# Validate against best practices
-/api-gateway validate --verbose
-
-# Generate documentation
-/api-gateway document --format markdown
-```
+**Output:** BFF architecture with two gateways, detailed routing tables, JWT validation at the edge, per-client rate limits, and circuit breaker configuration for each backend service.
