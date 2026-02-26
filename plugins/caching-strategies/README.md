@@ -1,46 +1,41 @@
-# Caching Strategies
+# Caching Strategies Plugin
 
-Cache patterns, invalidation, distributed caching, CDN
+Designs, audits, and debugs caching layers for distributed systems. Covers Redis/Memcached/CDN topology selection, cache-aside/write-through/write-behind strategies, cache stampede prevention (PER algorithm), cache invalidation, Redis data structure selection, and CDN cache-control headers.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Caching Architect** - Specialized agent for Cache patterns, invalidation, distributed caching, CDN
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/caching-architect/AGENT.md` | Expert in Redis (data structures, Cluster, Sentinel), Memcached, CDN (Fastly, CloudFront, Cloudflare), Caffeine in-process cache. PER algorithm, write strategies, stampede prevention, connection pooling. References Fowler, Facebook Memcached paper, Vattani PER paper. |
 
 ### Commands
-- `/cache` - Quick-access command for caching-strategies workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/cache/COMMAND.md` | `/cache analyze|design|invalidate|benchmark` — access pattern analysis, cache topology and key schema design, invalidation strategy, Redis metrics interpretation. |
 
 ### Skills
-- **Caching Patterns** - Pattern library and knowledge base for caching-strategies
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/caching-patterns/SKILL.md` | Named patterns with code: cache-aside (TypeScript), write-through (Java), write-behind counters (Python), PER stampede prevention (Python), Redis sorted set rate limiting, cache warming scripts. Production anti-patterns. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Diagnosing database overload that caching might reduce
+- Designing cache key schema for multi-tenant systems (prevents data leakage)
+- Choosing between in-process LRU and shared Redis cache
+- Preventing cache stampede on high-traffic expiring keys
+- Designing CDN caching strategy with proper cache-control headers and tag invalidation
+- Interpreting Redis `INFO stats` and diagnosing low hit rates or high eviction
 
-```
-# Use the command directly
-/cache analyze
+## Key References
 
-# Use the command with specific input
-/cache generate --context "your project"
-
-# Reference patterns from the skill
-"Apply caching-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for caching-strategies
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Fowler, Martin. _Patterns of Enterprise Application Architecture_. Addison-Wesley, 2002.
+- Nishtala, Rajesh, et al. "Scaling Memcache at Facebook." NSDI 2013.
+- Vattani, Andrea, et al. "Optimal Probabilistic Cache Stampede Prevention." VLDB 2015.
+- Redis documentation: redis.io/docs.
+- Ben-Manes, Ben. Caffeine: github.com/ben-manes/caffeine.
+- RFC 7234: HTTP/1.1 Caching.

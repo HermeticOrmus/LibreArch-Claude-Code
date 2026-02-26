@@ -1,46 +1,39 @@
-# Event Driven
+# Event-Driven Plugin
 
-Event bus, pub/sub, choreography vs orchestration
+Event-driven architecture patterns covering Kafka, AWS SNS/SQS, Azure Service Bus, CloudEvents, choreography vs orchestration, outbox pattern, dead letter queues, and schema evolution.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Event Architect** - Specialized agent for Event bus, pub/sub, choreography vs orchestration
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/event-architect/AGENT.md` | Expert in event-driven systems at scale. Covers broker selection (Kafka vs SQS vs RabbitMQ), CloudEvents specification, outbox pattern, choreography vs orchestration decision criteria, DLQ strategy, Kafka partition key selection, and Avro schema evolution with Confluent Schema Registry. |
 
 ### Commands
-- `/event-driven` - Quick-access command for event-driven workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/event-driven/COMMAND.md` | `/event-driven design|publish|consume|replay` — event topology design, outbox pattern for reliable publishing, consumer group configuration with idempotency, and Kafka offset replay for read model rebuilding. |
 
 ### Skills
-- **Event Driven Patterns** - Pattern library and knowledge base for event-driven
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/event-driven-patterns/SKILL.md` | Named patterns with code: CloudEvents envelope (TypeScript), Kafka producer with idempotent config, Kafka consumer with idempotency guard, Outbox pattern (Java + Spring), DLQ retry handler (Java), Avro schema evolution. Anti-patterns: publishing inside DB transaction, fat events, no DLQ monitoring. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Decoupling synchronous REST calls between services into async events
+- Designing reliable event publishing from services that also write to a database
+- Setting up Kafka consumer groups with proper offset management
+- Choosing between choreography and orchestration for a multi-service saga
+- Evolving event schemas without breaking existing consumers
 
-```
-# Use the command directly
-/event-driven analyze
+## Key References
 
-# Use the command with specific input
-/event-driven generate --context "your project"
-
-# Reference patterns from the skill
-"Apply event-driven-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for event-driven
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Hohpe, Gregor, and Bobby Woolf. _Enterprise Integration Patterns_. Addison-Wesley, 2003.
+- Newman, Sam. _Building Microservices_, 2nd ed. O'Reilly, 2021.
+- CNCF CloudEvents specification: cloudevents.io
+- Richardson, Chris. Outbox pattern: microservices.io/patterns/data/transactional-outbox.html
+- Kleppmann, Martin. _Designing Data-Intensive Applications_. O'Reilly, 2017. Chapter 11.

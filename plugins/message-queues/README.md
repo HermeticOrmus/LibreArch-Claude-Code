@@ -1,46 +1,38 @@
-# Message Queues
+# Message Queues Plugin
 
-RabbitMQ, Kafka, SQS, dead letter queues, patterns
+Message broker architecture for RabbitMQ, Kafka, AWS SQS/SNS, and Azure Service Bus. Covers exchange/topic topology design, delivery semantics, competing consumers, dead letter queues, consumer lag debugging, and idempotent message processing.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Messaging Architect** - Specialized agent for RabbitMQ, Kafka, SQS, dead letter queues, patterns
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/messaging-architect/AGENT.md` | Expert in broker selection and messaging patterns. Covers RabbitMQ exchange types (direct, topic, fanout, headers), Kafka partition strategy and consumer groups, SQS/SNS fan-out, delivery semantics (at-most-once, at-least-once, exactly-once), DLQ design, prefetch/backpressure, and competing consumers. References Hohpe/Woolf EIP 2003, Kleppmann DDIA Chapter 11. |
 
 ### Commands
-- `/message-queue` - Quick-access command for message-queues workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/message-queue/COMMAND.md` | `/message-queue design|configure|debug|dlq` — broker and topology selection, consumer delivery configuration, consumer lag debugging, and DLQ workflow design with replay procedures. |
 
 ### Skills
-- **Messaging Patterns** - Pattern library and knowledge base for message-queues
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/messaging-patterns/SKILL.md` | Named patterns with code: RabbitMQ topic exchange with DLQ (Python), SQS+SNS fan-out with CDK (TypeScript), Kafka consumer group with idempotency (Java), competing consumers with prefetch (Python). Anti-patterns: queue-per-service-pair, synchronous wait after publish, no DLQ, unlimited prefetch. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Choosing between RabbitMQ, Kafka, and SQS for a new async integration
+- Designing a fan-out topology where multiple consumers receive the same event
+- Configuring consumer groups to scale processing with Kafka partitions
+- Setting up DLQs and alerting on failed message delivery
+- Debugging consumer lag or duplicate processing incidents
 
-```
-# Use the command directly
-/message-queue analyze
+## Key References
 
-# Use the command with specific input
-/message-queue generate --context "your project"
-
-# Reference patterns from the skill
-"Apply messaging-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for message-queues
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Hohpe, Gregor, and Bobby Woolf. _Enterprise Integration Patterns_. Addison-Wesley, 2003.
+- Kleppmann, Martin. _Designing Data-Intensive Applications_. O'Reilly, 2017. Chapter 11.
+- RabbitMQ AMQP concepts: rabbitmq.com/tutorials/amqp-concepts.html
+- AWS SQS Developer Guide: docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide

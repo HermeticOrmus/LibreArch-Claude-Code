@@ -1,46 +1,38 @@
-# Service Discovery
+# Service Discovery Plugin
 
-Service registry, client/server-side discovery, health checks
+Service registry patterns, DNS-based discovery, Kubernetes Services, Consul registration, health check design, and debugging DNS resolution failures in microservice deployments.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Discovery Engineer** - Specialized agent for Service registry, client/server-side discovery, health checks
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/discovery-engineer/AGENT.md` | Expert in service discovery patterns. Covers client-side (Eureka, Ribbon) vs server-side discovery (Kubernetes Services, ALB), DNS-based discovery (CoreDNS, Consul DNS), Consul service registration with health checks, Kubernetes headless services for StatefulSets, readiness vs liveness health check design, and self-registration vs third-party registration. References Newman 2021, HashiCorp Consul docs, Kubernetes docs. |
 
 ### Commands
-- `/service-discovery` - Quick-access command for service-discovery workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/service-discovery/COMMAND.md` | `/service-discovery design|health|debug|configure` — discovery pattern selection, health check design for liveness/readiness separation, DNS resolution debugging, and Kubernetes Service YAML generation. |
 
 ### Skills
-- **Discovery Patterns** - Pattern library and knowledge base for service-discovery
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/discovery-patterns/SKILL.md` | Named patterns with code: Kubernetes Service with readiness-gated traffic, headless service for Kafka/StatefulSets, Consul service registration (Go), Kubernetes LoadBalancer for external traffic, Spring Boot composite readiness indicator. Anti-patterns: hardcoded IPs, remote service checks in liveness probe, missing startup probe, stale Eureka entries. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Setting up DNS-based service discovery between new microservices on Kubernetes
+- Designing health check endpoints that correctly separate liveness from readiness
+- Debugging connection refused errors that may be DNS resolution or readiness failures
+- Exposing a service externally via cloud load balancer
+- Setting up Consul for bare-metal or hybrid cloud service registration
 
-```
-# Use the command directly
-/service-discovery analyze
+## Key References
 
-# Use the command with specific input
-/service-discovery generate --context "your project"
-
-# Reference patterns from the skill
-"Apply discovery-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for service-discovery
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Newman, Sam. _Building Microservices_, 2nd ed. O'Reilly, 2021. Chapter 9.
+- Kubernetes Services and DNS: kubernetes.io/docs/concepts/services-networking
+- Consul documentation: developer.hashicorp.com/consul/docs
+- Spring Boot Actuator health: docs.spring.io/spring-boot/docs/current/actuator-api

@@ -1,50 +1,52 @@
 # API Gateway Plugin
 
-> Patterns for designing and implementing API gateways that handle routing, rate limiting, authentication, request aggregation, and protocol translation.
-
-## Overview
-
-The API Gateway plugin provides expertise in the gateway pattern -- a single entry point that sits between clients and backend services. API gateways handle cross-cutting concerns (authentication, rate limiting, logging, CORS) so individual services do not have to. This plugin covers gateway design decisions, routing strategies, and the trade-offs between different gateway architectures.
+Designs, configures, and audits API gateway layers for microservices architectures. Covers gateway topology selection (single gateway vs BFF vs service mesh ingress), rate limiting algorithm design, JWT/OAuth 2.0 validation at the edge, circuit breaking, and API versioning strategy.
 
 ## Contents
 
 ### Agents
 
-| Agent | File | Purpose |
-|-------|------|---------|
-| API Gateway Architect | `agents/api-gateway-architect/AGENT.md` | Designs gateway architectures, routing strategies, and cross-cutting concern implementations. |
+| Agent | Purpose |
+|-------|---------|
+| `agents/api-gateway-architect/AGENT.md` | Deep expertise in Kong, AWS API Gateway, Traefik, Envoy, Nginx/OpenResty. Token bucket/sliding window/leaky bucket algorithms. JWT validation with JWKS caching. BFF topology design. Circuit breaking at the edge. |
 
 ### Commands
 
-| Command | File | Purpose |
-|---------|------|---------|
-| `/api-gateway` | `commands/api-gateway/COMMAND.md` | Analyze or design an API gateway for a given system with routing, rate limiting, and security patterns. |
+| Command | Purpose |
+|---------|---------|
+| `commands/api-gateway/COMMAND.md` | `/api-gateway design|configure|secure|monitor` — topology design, technology-specific config generation (Kong YAML, Nginx conf, Envoy YAML), auth strategy, observability setup. |
 
 ### Skills
 
-| Skill | Directory | Purpose |
-|-------|-----------|---------|
-| Gateway Patterns | `skills/gateway-patterns/SKILL.md` | Knowledge base of gateway patterns: BFF, aggregation, protocol translation, edge functions. |
+| Skill | Purpose |
+|-------|---------|
+| `skills/gateway-patterns/SKILL.md` | Named patterns with code: token bucket in Redis Lua, Envoy JWT filter, Kong declarative config, BFF response shaping in TypeScript, API versioning with RFC 8594 Sunset headers. Production anti-patterns. |
 
-## Usage
+## When to Use
 
-Use `/api-gateway` when designing a new gateway layer or evaluating whether your system needs one. The agent helps with gateway type selection (API gateway vs BFF vs service mesh ingress), routing strategy, and cross-cutting concern placement.
+- Choosing between API gateway, BFF, or service mesh for a new architecture
+- Generating production-ready Kong, Nginx, Traefik, or Envoy configuration
+- Designing rate limiting with distributed counters and Redis failure modes
+- Setting up JWT validation at the edge with JWKS caching and claim forwarding
+- Planning API versioning with deprecation lifecycle (Sunset headers, parallel routes)
+- Debugging gateway latency, rate limit tuning, circuit breaker threshold calibration
 
 ## Related Plugins
 
 | Plugin | Relationship |
 |--------|-------------|
-| `microservices` | Gateways are commonly used with microservices architectures |
-| `service-discovery` | Gateways need to discover backend services |
-| `circuit-breaker` | Gateways implement resilience patterns for downstream calls |
-| `caching-strategies` | Gateways often implement response caching |
-| `scalability-patterns` | Gateway scaling and load distribution |
+| `microservices` | Gateways are the entry point for microservice topologies |
+| `service-discovery` | Gateways discover backends via Consul, DNS, or k8s service |
+| `circuit-breaker` | Circuit breaking at the gateway protects connection pools |
+| `caching-strategies` | Gateway-level response caching with cache-control headers |
+| `scalability-patterns` | Gateway horizontal scaling, upstream load balancing |
 
-## When to Use an API Gateway
+## Key References
 
-| Scenario | Recommendation |
-|----------|---------------|
-| Multiple clients (web, mobile, IoT) with different needs | BFF pattern per client type |
-| Cross-cutting concerns (auth, rate limiting) duplicated across services | Centralized gateway |
-| Simple system with 2-3 services | Probably unnecessary -- use a load balancer |
-| Need protocol translation (REST to gRPC) | Gateway with protocol adapters |
+- Chris Richardson: _Microservices Patterns_, Chapter 8 (API Gateway pattern). Manning, 2018.
+- Sam Newman: _Building Microservices_ 2nd ed., Chapter 14 (BFF). O'Reilly, 2021.
+- Sam Newman: "Pattern: Backends For Frontends." samnewman.io, 2015.
+- Kong Gateway docs: docs.konghq.com
+- Envoy Proxy docs: envoyproxy.io/docs
+- RFC 8594: The Sunset HTTP Header Field (deprecation signaling)
+- RFC 6749: OAuth 2.0 Authorization Framework

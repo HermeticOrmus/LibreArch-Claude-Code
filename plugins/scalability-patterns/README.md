@@ -1,46 +1,39 @@
-# Scalability Patterns
+# Scalability Patterns Plugin
 
-Horizontal/vertical scaling, load balancing, auto-scaling
+Horizontal and vertical scaling, AKF Scale Cube, load balancing, auto-scaling (HPA, KEDA), stateless service design, database read/write splitting, queue-based load leveling, and capacity planning with Little's Law.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Scalability Architect** - Specialized agent for Horizontal/vertical scaling, load balancing, auto-scaling
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/scalability-architect/AGENT.md` | Expert in scaling strategy and capacity planning. Covers AKF Scale Cube (X/Y/Z axis), load balancing algorithms, stateless session design (Redis vs JWT), Kubernetes HPA and KEDA, database read replica routing, queue-based load leveling, and Little's Law for capacity calculation. References Abbott/Fisher 2015, Kleppmann DDIA, AWS Well-Architected, Google SRE Book. |
 
 ### Commands
-- `/scale` - Quick-access command for scalability-patterns workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/scale/COMMAND.md` | `/scale analyze|design|autoscale|capacity` — bottleneck identification, AKF-based scaling strategy, HPA/KEDA configuration, and capacity calculation for target traffic levels. |
 
 ### Skills
-- **Scalability Patterns** - Pattern library and knowledge base for scalability-patterns
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/scalability-patterns/SKILL.md` | Named patterns with code: Kubernetes HPA with custom metrics YAML, KEDA Kafka consumer auto-scaling, Redis session for stateless horizontal scaling (Node.js), database read/write splitting with Spring, SQS queue-based load leveling. Anti-patterns: stateful horizontal scaling, scaling app servers when DB is bottleneck, thundering herd, no scale-down cooldown. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Designing a service that must handle 10x current load
+- Configuring Kubernetes HPA or KEDA for a new microservice deployment
+- Identifying whether to scale application pods or database first
+- Capacity planning for a product launch or flash sale event
+- Moving session state out of application memory to enable horizontal scaling
 
-```
-# Use the command directly
-/scale analyze
+## Key References
 
-# Use the command with specific input
-/scale generate --context "your project"
-
-# Reference patterns from the skill
-"Apply scalability-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for scalability-patterns
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Abbott, Martin, and Michael Fisher. _The Art of Scalability_, 2nd ed. Addison-Wesley, 2015.
+- Kleppmann, Martin. _Designing Data-Intensive Applications_. O'Reilly, 2017.
+- AWS Well-Architected Framework, Performance Efficiency Pillar. aws.amazon.com/architecture/well-architected.
+- KEDA: keda.sh
+- Kubernetes HPA: kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale

@@ -1,46 +1,42 @@
-# Data Consistency
+# Data Consistency Plugin
 
-Eventual consistency, strong consistency, conflict resolution
+Designs consistency strategies for distributed systems. Covers CAP theorem (Brewer 2000), PACELC (Abadi 2012), consistency models (eventual → linearizable), CRDTs (G-Counter, OR-Set, LWW-Register), vector clocks, quorum configuration, distributed transactions (2PC, Saga), and conflict resolution strategies.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Consistency Engineer** - Specialized agent for Eventual consistency, strong consistency, conflict resolution
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/consistency-engineer/AGENT.md` | Expert in CAP/PACELC, consistency models (linearizable to eventual), CRDTs (Shapiro 2011), vector clocks (Lamport 1978), Amazon Dynamo quorum model, 2PC blocking analysis, Cassandra consistency levels. |
 
 ### Commands
-- `/consistency` - Quick-access command for data-consistency workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/consistency/COMMAND.md` | `/consistency analyze|design|test-scenarios|prove` — requirement classification, consistency strategy design, partition failure modeling, quorum/CRDT property verification. |
 
 ### Skills
-- **Consistency Patterns** - Pattern library and knowledge base for data-consistency
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/consistency-patterns/SKILL.md` | Named patterns with code: G-Counter CRDT (Python), OR-Set CRDT (Python), read-your-writes session token (TypeScript), Cassandra quorum configuration, vector clock conflict detection (Java). Production anti-patterns. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Users experiencing stale reads or lost updates after concurrent writes
+- Choosing consistency level for Cassandra operations
+- Designing concurrent collaboration features (shared carts, co-editing)
+- Evaluating distributed transaction approaches — 2PC vs Saga
+- Modeling partition behavior and recovery strategies
+- Proving that a quorum configuration provides the required guarantees
 
-```
-# Use the command directly
-/consistency analyze
+## Key References
 
-# Use the command with specific input
-/consistency generate --context "your project"
-
-# Reference patterns from the skill
-"Apply consistency-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for data-consistency
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Brewer, Eric. "Towards Robust Distributed Systems." SOSP, 2000.
+- Gilbert, Seth, and Nancy Lynch. "Brewer's Conjecture..." JACM 2002.
+- Abadi, Daniel. PACELC. IEEE Computer, 2012.
+- DeCandia, Giuseppe, et al. "Dynamo." SOSP 2007.
+- Kleppmann, Martin. _Designing Data-Intensive Applications_. O'Reilly, 2017. Chapters 5, 9.
+- Shapiro, Marc, et al. "CRDTs." INRIA 2011.
+- Lamport, Leslie. "Time, Clocks..." CACM 1978.

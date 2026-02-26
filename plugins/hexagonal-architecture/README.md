@@ -1,46 +1,38 @@
-# Hexagonal Architecture
+# Hexagonal Architecture Plugin
 
-Ports and adapters, dependency inversion, testability
+Ports and adapters architecture (Alistair Cockburn 2005): driving ports, driven ports, adapter implementations, dependency inversion, framework-free domain testing, and ArchUnit enforcement.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Hex Arch Engineer** - Specialized agent for Ports and adapters, dependency inversion, testability
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/hex-arch-engineer/AGENT.md` | Expert in hexagonal architecture. Covers driving ports (input), driven ports (output), adapter pattern, dependency rule enforcement, framework-free domain model, ArchUnit fitness functions, and relationship to Clean Architecture and DDD bounded contexts. References Cockburn 2005, Hombergs 2023, Vernon IDDD. |
 
 ### Commands
-- `/hex-arch` - Quick-access command for hexagonal-architecture workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/hex-arch/COMMAND.md` | `/hex-arch analyze|scaffold|check-deps|test-adapter` — compliance audit, use case scaffolding (driving port + interactor + adapter), dependency direction verification, and in-memory test adapter generation. |
 
 ### Skills
-- **Hex Arch Patterns** - Pattern library and knowledge base for hexagonal-architecture
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/hex-arch-patterns/SKILL.md` | Named patterns with code: canonical folder structure, driving port + interactor (Java), driven port + JPA adapter (Java), in-memory test adapter (Java), ArchUnit fitness tests. Anti-patterns: port interface in infrastructure, JPA annotations on domain objects, controller calling repository directly. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Starting a new service: establish hexagonal folder structure from the beginning
+- Reviewing a Spring Boot service for framework contamination of domain objects
+- Creating fast unit tests by swapping JPA adapters for in-memory implementations
+- Enforcing the dependency rule in CI with ArchUnit
+- Explaining the difference between ports (interfaces) and adapters (implementations) to a team
 
-```
-# Use the command directly
-/hex-arch analyze
+## Key References
 
-# Use the command with specific input
-/hex-arch generate --context "your project"
-
-# Reference patterns from the skill
-"Apply hex-arch-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for hexagonal-architecture
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Cockburn, Alistair. "Hexagonal Architecture." alistair.cockburn.us/hexagonal-architecture, 2005.
+- Hombergs, Tom. _Get Your Hands Dirty on Clean Architecture_, 2nd ed. Packt, 2023.
+- Vernon, Vaughn. _Implementing Domain-Driven Design_. Addison-Wesley, 2013.
+- Graca, Herberto. "DDD, Hexagonal, Onion, Clean, CQRS." herbertograca.com, 2017.

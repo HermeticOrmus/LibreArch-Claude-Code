@@ -1,46 +1,40 @@
-# Circuit Breaker
+# Circuit Breaker Plugin
 
-Circuit breaker, bulkhead, retry, timeout patterns
+Designs and configures circuit breakers, bulkheads, retry strategies, and timeout budgets for distributed services. Prevents cascading failures through state-machine-based failure detection and fallback hierarchies.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Resilience Engineer** - Specialized agent for Circuit breaker, bulkhead, retry, timeout patterns
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/resilience-engineer/AGENT.md` | Expert in Resilience4j, Hystrix (reference), Polly. Circuit breaker state machine (Closed/Open/Half-Open), bulkhead isolation, exponential backoff with jitter (Brooker 2015), cascading timeout budgets, health endpoint design. References Nygard's _Release It!_. |
 
 ### Commands
-- `/circuit-breaker` - Quick-access command for circuit-breaker workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/circuit-breaker/COMMAND.md` | `/circuit-breaker configure|test|monitor|tune` — configuration generation, chaos test design, metrics/alert setup, threshold tuning based on false positive/negative analysis. |
 
 ### Skills
-- **Resilience Patterns** - Pattern library and knowledge base for circuit-breaker
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/resilience-patterns/SKILL.md` | Named patterns with code: Resilience4j full configuration (Java), bulkhead with semaphore, full-jitter backoff (Python), cascading timeout budget, health check endpoints (TypeScript + Kubernetes YAML). Production anti-patterns with incident types. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Adding resilience to a new downstream dependency (HTTP, gRPC, database)
+- Post-incident: cascading failure revealed missing circuit breakers or misconfigured timeouts
+- Designing the retry strategy for a service with intermittent failures
+- Diagnosing thread pool exhaustion from a slow downstream service
+- Setting up Kubernetes liveness/readiness probes integrated with circuit state
+- Tuning circuit breaker thresholds to eliminate false positives or slow reaction
 
-```
-# Use the command directly
-/circuit-breaker analyze
+## Key References
 
-# Use the command with specific input
-/circuit-breaker generate --context "your project"
-
-# Reference patterns from the skill
-"Apply resilience-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for circuit-breaker
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Nygard, Michael. _Release It!_ 2nd ed. Pragmatic Programmers, 2018.
+- Resilience4j: resilience4j.readme.io.
+- Netflix Tech Blog: "Making Netflix API More Resilient." 2012.
+- Brooker, Marc. "Exponential Backoff and Jitter." AWS Architecture Blog, 2015.
+- Polly (.NET): github.com/App-vNext/Polly.

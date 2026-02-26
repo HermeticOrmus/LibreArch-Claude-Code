@@ -1,46 +1,39 @@
-# Domain Driven Design
+# Domain-Driven Design Plugin
 
-Bounded contexts, aggregates, value objects, ubiquitous language
+Aggregate root design, bounded context mapping, value objects, domain events, ubiquitous language, and context integration patterns.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Ddd Architect** - Specialized agent for Bounded contexts, aggregates, value objects, ubiquitous language
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/ddd-architect/AGENT.md` | Expert in Eric Evans' blue book and Vaughn Vernon's red book. Covers aggregate design rules, bounded context identification, value objects, domain events, context mapping patterns (ACL, OHS, Conformist, Partnership), and ubiquitous language enforcement. |
 
 ### Commands
-- `/ddd` - Quick-access command for domain-driven-design workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/ddd/COMMAND.md` | `/ddd model|map-contexts|validate|generate` — aggregate root design from invariants, context relationship mapping with pattern selection, anemic model detection, and full DDD scaffold generation. |
 
 ### Skills
-- **Ddd Patterns** - Pattern library and knowledge base for domain-driven-design
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/ddd-patterns/SKILL.md` | Named patterns with code: aggregate root with invariant enforcement (Java), Money value object (TypeScript), domain event publishing via Outbox (Java), Anticorruption Layer (TypeScript). Anti-patterns: anemic domain model, cross-aggregate object references, one-aggregate-for-everything. |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Designing a new service: identify aggregate boundaries from business invariants
+- Refactoring a service with logic scattered across service classes into a rich domain model
+- Integrating with an external system: design the Anticorruption Layer
+- Reviewing bounded context boundaries when teams step on each other's models
+- Choosing between ACL, Conformist, OHS, or Shared Kernel for a cross-context integration
 
-```
-# Use the command directly
-/ddd analyze
+## Key References
 
-# Use the command with specific input
-/ddd generate --context "your project"
-
-# Reference patterns from the skill
-"Apply ddd-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for domain-driven-design
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Evans, Eric. _Domain-Driven Design: Tackling Complexity in the Heart of Software_. Addison-Wesley, 2003. (blue book)
+- Vernon, Vaughn. _Implementing Domain-Driven Design_. Addison-Wesley, 2013. (red book)
+- Vernon, Vaughn. _Domain-Driven Design Distilled_. Addison-Wesley, 2016.
+- Brandolini, Alberto. _Introducing Event Storming_. Leanpub, 2021.
+- DDD Crew context mapping patterns: github.com/ddd-crew/context-mapping

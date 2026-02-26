@@ -1,87 +1,112 @@
 # /hex-arch
 
-A quick-access command for hexagonal-architecture workflows in Claude Code.
+> Analyze hexagonal architecture compliance, scaffold new ports and adapters, check dependencies, and generate in-memory test adapters.
+
+## Usage
+
+```
+/hex-arch analyze       - Audit existing code for hexagonal violations
+/hex-arch scaffold      - Generate driving port, use case interactor, and adapter stubs
+/hex-arch check-deps    - Verify dependency directions (inner ← outer only)
+/hex-arch test-adapter  - Generate in-memory adapter implementation for a driven port
+```
 
 ## Trigger
 
-`/hex-arch [action] [options]`
-
-## Input
-
-### Actions
-- `analyze` - Analyze existing hexagonal-architecture implementation
-- `generate` - Generate new hexagonal-architecture artifacts
-- `improve` - Suggest improvements to current implementation
-- `validate` - Check implementation against best practices
-- `document` - Generate documentation for hexagonal-architecture artifacts
-
-### Options
-- `--context <path>` - Specify the file or directory to operate on
-- `--format <type>` - Output format (markdown, json, yaml)
-- `--verbose` - Include detailed explanations
-- `--dry-run` - Preview changes without applying them
+Use this command when:
+- Reviewing a service to ensure framework annotations don't appear in domain objects
+- Generating the boilerplate for a new use case (driving port + interactor + REST adapter)
+- Verifying that your application layer doesn't import from infrastructure packages
+- Creating a fast in-memory test double for a repository or event publisher port
 
 ## Process
 
-### Step 1: Context Gathering
-- Read relevant files and configuration
-- Identify the current state of hexagonal-architecture artifacts
-- Determine applicable standards and conventions
+### /hex-arch analyze
+1. Scan domain and application packages for framework imports (`@Entity`, `@RestController`, `@Autowired`).
+2. Verify port interfaces reside in domain or application layers (not in adapter packages).
+3. Check that adapters implement ports (not that domain classes implement adapter interfaces).
+4. Identify any direct calls from web adapters to persistence adapters (bypassing use cases).
+5. Report violations by layer with severity and fix suggestions.
 
-### Step 2: Analysis
-- Evaluate against hex-arch-patterns patterns
-- Identify gaps, issues, and opportunities
-- Prioritize findings by impact and effort
+### /hex-arch scaffold
+1. Identify the use case name (verb + noun, e.g., PlaceOrder, CancelShipment).
+2. Generate driving port interface: `PlaceOrderUseCase` with `PlaceOrderCommand` record.
+3. Generate use case interactor: `PlaceOrderInteractor implements PlaceOrderUseCase`.
+4. Generate driving adapter stub: `OrderController` calling the driving port.
+5. Generate driven port interface: `OrderRepository` with the operations needed.
+6. Generate driven adapter stub: `JpaOrderRepositoryAdapter implements OrderRepository`.
+7. Generate entity mapper skeleton: `OrderEntityMapper` (domain ↔ JPA entity).
 
-### Step 3: Execution
-- Apply the requested action
-- Generate or modify artifacts as needed
-- Validate changes against requirements
+### /hex-arch check-deps
+1. Verify domain layer imports: only java.*, standard library, domain-internal.
+2. Verify application layer imports: domain layer + standard library only.
+3. Verify adapter layer imports: may use framework + application ports.
+4. Flag any case where domain/application imports from adapter packages.
+5. Suggest ArchUnit test class to enforce these rules in CI.
 
-### Step 4: Output
-- Present results in the requested format
-- Include actionable next steps
-- Flag any items requiring human decision
-
-## Output
-
-### Success
-```
-## Hexagonal Architecture - [Action] Complete
-
-### Changes Made
-- [List of changes]
-
-### Validation
-- [Checks passed]
-
-### Next Steps
-- [Recommended follow-up actions]
-```
-
-### Error
-```
-## Hexagonal Architecture - [Action] Failed
-
-### Issue
-[Description of the problem]
-
-### Suggested Fix
-[How to resolve the issue]
-```
+### /hex-arch test-adapter
+1. Identify the driven port interface to implement.
+2. Generate in-memory implementation using a HashMap or ArrayList backing store.
+3. Add test-helper methods (e.g., `size()`, `findAll()`) that are not part of the port.
+4. Show usage in a unit test setup block.
 
 ## Examples
 
-```bash
-# Analyze current implementation
-/hex-arch analyze
+**Example: `/hex-arch scaffold`**
 
-# Generate new artifacts
-/hex-arch generate --context ./src
+Input: "Need a PlaceOrder use case for an order service. Order is placed by customerId + list of items. Needs to check customer exists and save the order."
 
-# Validate against best practices
-/hex-arch validate --verbose
+Output:
+```java
+// application/port/in/PlaceOrderUseCase.java
+public interface PlaceOrderUseCase {
+    record PlaceOrderCommand(CustomerId customerId, List<OrderItemDto> items) {}
+    OrderId placeOrder(PlaceOrderCommand command);
+}
 
-# Generate documentation
-/hex-arch document --format markdown
+// application/service/PlaceOrderInteractor.java
+@Service
+@Transactional
+public class PlaceOrderInteractor implements PlaceOrderUseCase {
+    // Constructor injection of: CustomerRepository, OrderRepository, EventPublisher
+    // 1. Load customer (throw if not found)
+    // 2. Create Order aggregate
+    // 3. Save via repository
+    // 4. Publish domain events
+    // 5. Return OrderId
+}
+
+// adapter/web/OrderController.java
+@RestController
+@RequestMapping("/api/v1/orders")
+public class OrderController {
+    @PostMapping
+    public ResponseEntity<OrderResponse> placeOrder(@Valid @RequestBody OrderRequest req) {
+        // Map req → PlaceOrderCommand
+        // Call placeOrderUseCase.placeOrder(command)
+        // Return 201 Created with Location header
+    }
+}
 ```
+
+**Example: `/hex-arch check-deps`**
+
+Violation report:
+```
+VIOLATION [HIGH]: domain/model/Order.java imports org.springframework.data.annotation.Id
+  → Remove @Id from domain entity. Use a separate OrderJpaEntity in the persistence adapter.
+
+VIOLATION [HIGH]: application/service/PlaceOrderInteractor.java imports adapter.persistence.JpaOrderRepository
+  → Interactor must depend only on the port interface OrderRepository, not on the JPA implementation.
+    Use constructor injection with the interface type.
+
+VIOLATION [MEDIUM]: adapter/web/OrderController.java imports adapter.persistence.JpaOrderRepository
+  → Web adapter must call use case port, not persistence adapter directly.
+```
+
+## Output Format
+
+- Violation report with layer, file, import, severity, and fix
+- Scaffolded code files with package declarations and method stubs
+- ArchUnit test class to enforce violations in CI
+- In-memory test adapter with test-helper methods

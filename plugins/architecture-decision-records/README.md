@@ -1,46 +1,39 @@
-# Architecture Decision Records
+# Architecture Decision Records Plugin
 
-ADR creation, templates, decision tracking
+Creates, maintains, supersedes, and audits Architecture Decision Records. Covers Nygard format, MADR (Markdown Architectural Decision Records), Y-Statements, ADR status lifecycle, fitness functions for enforcement, and linking decisions to code.
 
-## What's Included
+## Contents
 
 ### Agents
-- **Adr Curator** - Specialized agent for ADR creation, templates, decision tracking
+
+| Agent | Purpose |
+|-------|---------|
+| `agents/adr-curator/AGENT.md` | Expert in ADR formats (Nygard, MADR, Y-Statement, RFC-style), decision lifecycle, reversibility assessment, fitness function design. References Nygard (2011), Kopp (MADR), Ford/Parsons/Kua (_Building Evolutionary Architectures_). |
 
 ### Commands
-- `/adr` - Quick-access command for architecture-decision-records workflows
+
+| Command | Purpose |
+|---------|---------|
+| `commands/adr/COMMAND.md` | `/adr new|list|supersede|export` — structured process for writing ADRs with Y-Statement summaries, auditing decision inventory, managing supersession, and exporting decision indexes. |
 
 ### Skills
-- **Adr Patterns** - Pattern library and knowledge base for architecture-decision-records
 
-## Quick Start
+| Skill | Purpose |
+|-------|---------|
+| `skills/adr-patterns/SKILL.md` | Complete MADR and Nygard templates, Y-Statement examples, fitness functions in ArchUnit (Java), code annotation patterns, rejected ADR examples, anti-patterns (stale ADR, no-alternatives ADR). |
 
-1. Copy this plugin to your Claude Code plugins directory
-2. Use the agent for guided, multi-step workflows
-3. Use the command for quick, targeted operations
-4. Reference the skill for patterns and best practices
+## When to Use
 
-## Usage Examples
+- Making a significant architectural decision (database engine, messaging, architecture style, public API shape)
+- Reversing or updating a previous architectural decision
+- Onboarding engineers who need to understand the history of decisions
+- Running an architecture review — inventory what decisions have been made and which are stale
+- Enforcing a structural constraint with a fitness function tied to an ADR
 
-```
-# Use the command directly
-/adr analyze
+## Key References
 
-# Use the command with specific input
-/adr generate --context "your project"
-
-# Reference patterns from the skill
-"Apply adr-patterns patterns to this implementation"
-```
-
-## Key Patterns
-
-- Follow established conventions for architecture-decision-records
-- Validate inputs before processing
-- Document decisions and rationale
-- Test outputs against requirements
-- Iterate based on feedback
-
-## Related Plugins
-
-Check the main README for related plugins in this collection.
+- Nygard, Michael. "Documenting Architecture Decisions." cognitect.com/blog, 2011.
+- Kopp, Oliver. MADR — Markdown Architectural Decision Records. adr.github.io/madr.
+- Ford, Neal, Rebecca Parsons, Patrick Kua. _Building Evolutionary Architectures_. O'Reilly, 2017.
+- npryce/adr-tools: github.com/npryce/adr-tools — CLI for managing ADRs.
+- Thoughtworks Technology Radar Vol. 19: Architecture Decision Records (Adopt).
