@@ -1,39 +1,35 @@
-# Domain-Driven Design Plugin
+# Domain-Driven Design
 
-Aggregate root design, bounded context mapping, value objects, domain events, ubiquitous language, and context integration patterns.
+> Bounded contexts, aggregates, value objects, domain events, anti-corruption layers, ubiquitous language. The patterns that align software structure to business reality.
 
 ## Contents
+- **Agent**: `ddd-strategist` — designs DDD-aligned architectures
+- **Command**: `/ddd` — context mapping, aggregate design, event identification
+- **Skill**: pattern library for tactical + strategic DDD
 
-### Agents
+## Key capabilities
 
-| Agent | Purpose |
-|-------|---------|
-| `agents/ddd-architect/AGENT.md` | Expert in Eric Evans' blue book and Vaughn Vernon's red book. Covers aggregate design rules, bounded context identification, value objects, domain events, context mapping patterns (ACL, OHS, Conformist, Partnership), and ubiquitous language enforcement. |
+- **Strategic DDD**: bounded contexts, context maps (partnership, customer-supplier, conformist, anti-corruption layer, shared kernel, open host, published language, separate ways)
+- **Tactical DDD**: aggregates (consistency boundaries, invariants), value objects, entities, domain services, domain events, repositories
+- **Ubiquitous language**: glossary per bounded context, alignment with business
+- **Aggregate design rules**: small aggregates, ID references between aggregates, eventual consistency between aggregates
+- **Event storming**: workshop format for discovering events, commands, aggregates
+- **Anti-corruption layer**: when adapting legacy/external systems, translation layer prevents domain pollution
 
-### Commands
+## When to use
 
-| Command | Purpose |
-|---------|---------|
-| `commands/ddd/COMMAND.md` | `/ddd model|map-contexts|validate|generate` — aggregate root design from invariants, context relationship mapping with pattern selection, anemic model detection, and full DDD scaffold generation. |
+- New system design (DDD pays back at scale; overkill for simple CRUD)
+- Refactoring a "big ball of mud" — DDD provides decomposition strategy
+- Microservices boundaries — DDD bounded contexts often map well to service boundaries
+- Legacy modernization — anti-corruption layer pattern bounds the legacy mess
+- Cross-team coordination — context maps express team boundaries
 
-### Skills
+## When NOT to use
 
-| Skill | Purpose |
-|-------|---------|
-| `skills/ddd-patterns/SKILL.md` | Named patterns with code: aggregate root with invariant enforcement (Java), Money value object (TypeScript), domain event publishing via Outbox (Java), Anticorruption Layer (TypeScript). Anti-patterns: anemic domain model, cross-aggregate object references, one-aggregate-for-everything. |
+- Simple CRUD apps (overkill)
+- Throwaway prototypes
+- Domains where the team has no business expert / domain SME access
 
-## When to Use
+## Compatibility
 
-- Designing a new service: identify aggregate boundaries from business invariants
-- Refactoring a service with logic scattered across service classes into a rich domain model
-- Integrating with an external system: design the Anticorruption Layer
-- Reviewing bounded context boundaries when teams step on each other's models
-- Choosing between ACL, Conformist, OHS, or Shared Kernel for a cross-context integration
-
-## Key References
-
-- Evans, Eric. _Domain-Driven Design: Tackling Complexity in the Heart of Software_. Addison-Wesley, 2003. (blue book)
-- Vernon, Vaughn. _Implementing Domain-Driven Design_. Addison-Wesley, 2013. (red book)
-- Vernon, Vaughn. _Domain-Driven Design Distilled_. Addison-Wesley, 2016.
-- Brandolini, Alberto. _Introducing Event Storming_. Leanpub, 2021.
-- DDD Crew context mapping patterns: github.com/ddd-crew/context-mapping
+Language-agnostic. Patterns translate across object-oriented, functional, mixed paradigms. Heavier in OO communities (Java, C#) historically.
