@@ -1,0 +1,20 @@
+{
+  "name": "saga-patterns",
+  "version": "1.0.0",
+  "description": "Sagas: orchestration vs choreography, compensating transactions, isolation countermeasures, and failure recovery.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "saga",
+    "compensating-transactions",
+    "temporal",
+    "orchestration",
+    "choreography"
+  ]
+}

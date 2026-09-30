@@ -1,0 +1,20 @@
+{
+  "name": "domain-driven-design",
+  "version": "1.0.0",
+  "description": "Domain-Driven Design: bounded contexts, context maps, aggregates, value objects, domain events, and event storming.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "ddd",
+    "domain-driven-design",
+    "bounded-context",
+    "aggregates",
+    "event-storming"
+  ]
+}

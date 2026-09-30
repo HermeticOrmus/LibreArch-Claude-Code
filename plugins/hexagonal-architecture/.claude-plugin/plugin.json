@@ -1,0 +1,19 @@
+{
+  "name": "hexagonal-architecture",
+  "version": "1.0.0",
+  "description": "Hexagonal architecture: ports and adapters, dependency direction, and framework-free testing of the application core.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "hexagonal",
+    "ports-and-adapters",
+    "dependency-inversion",
+    "testing"
+  ]
+}

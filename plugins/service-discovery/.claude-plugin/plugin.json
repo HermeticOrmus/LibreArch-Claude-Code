@@ -1,0 +1,19 @@
+{
+  "name": "service-discovery",
+  "version": "1.0.0",
+  "description": "Service discovery: Kubernetes DNS, Consul, and Eureka, health checks, and client-side vs server-side discovery.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "service-discovery",
+    "kubernetes",
+    "consul",
+    "health-checks"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "API gateway design: gateway topology, backend-for-frontend, routing, edge authentication, rate limiting, and API versioning.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "api-gateway",
+    "bff",
+    "rate-limiting",
+    "jwt",
+    "kong",
+    "envoy"
+  ]
+}

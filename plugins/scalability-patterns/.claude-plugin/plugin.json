@@ -1,0 +1,20 @@
+{
+  "name": "scalability-patterns",
+  "version": "1.0.0",
+  "description": "Scalability: horizontal and vertical scaling, load balancing, auto-scaling, read/write splitting, and capacity planning.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "scalability",
+    "autoscaling",
+    "load-balancing",
+    "capacity-planning",
+    "kubernetes"
+  ]
+}

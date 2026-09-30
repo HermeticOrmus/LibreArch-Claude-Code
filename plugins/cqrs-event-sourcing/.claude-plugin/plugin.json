@@ -1,0 +1,19 @@
+{
+  "name": "cqrs-event-sourcing",
+  "version": "1.0.0",
+  "description": "CQRS and event sourcing: command handlers, event stores, projections, snapshots, and event versioning.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "cqrs",
+    "event-sourcing",
+    "projections",
+    "eventstoredb"
+  ]
+}

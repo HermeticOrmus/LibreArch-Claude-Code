@@ -1,0 +1,20 @@
+{
+  "name": "event-driven",
+  "version": "1.0.0",
+  "description": "Event-driven architecture: broker choice, choreography vs orchestration, the outbox pattern, dead letter queues, and schema evolution.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "event-driven",
+    "kafka",
+    "outbox",
+    "cloudevents",
+    "messaging"
+  ]
+}

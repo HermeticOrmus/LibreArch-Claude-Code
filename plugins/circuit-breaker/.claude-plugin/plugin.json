@@ -1,0 +1,20 @@
+{
+  "name": "circuit-breaker",
+  "version": "1.0.0",
+  "description": "Resilience patterns: circuit breakers, bulkheads, timeouts, retries with jitter, and fallbacks that stop cascading failures.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "resilience",
+    "circuit-breaker",
+    "bulkhead",
+    "retry",
+    "resilience4j"
+  ]
+}
