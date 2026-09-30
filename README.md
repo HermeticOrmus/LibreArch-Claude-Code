@@ -93,6 +93,13 @@ See [QUICK_START.md](QUICK_START.md). Learning paths: [beginner](learning-paths/
 
 Starred this? Tell us what worked and what is missing: [open a feedback issue](https://github.com/HermeticOrmus/LibreArch-Claude-Code/issues/new?template=feedback.yml). Every piece of feedback gets an answer, and changes that come from it are credited in the release notes.
 
+## Contribute
+
+- Pick up the next piece of work from the [Menu](pantry/MENU.md): each item has a Done-when anyone can check, and the research behind it lives in [`pantry/`](pantry/README.md).
+- New here? Start with the [good first issues](https://github.com/HermeticOrmus/LibreArch-Claude-Code/contribute).
+- Use the forms: [feedback](https://github.com/HermeticOrmus/LibreArch-Claude-Code/issues/new?template=feedback.yml), [routing miss](https://github.com/HermeticOrmus/LibreArch-Claude-Code/issues/new?template=routing-miss.yml) when Claude picks the wrong plugin, and [plugin proposal](https://github.com/HermeticOrmus/LibreArch-Claude-Code/issues/new?template=plugin-proposal.yml).
+- Questions and show-and-tell go in [Discussions](https://github.com/HermeticOrmus/LibreArch-Claude-Code/discussions).
+
 ## Contributing
 
 PRs are welcome for plugin depth, architecture case studies, and language-specific examples. See [CONTRIBUTING.md](CONTRIBUTING.md).
