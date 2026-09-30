@@ -8,13 +8,13 @@ Ports and adapters architecture (Alistair Cockburn 2005): driving ports, driven 
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/hex-arch-engineer/AGENT.md` | Expert in hexagonal architecture. Covers driving ports (input), driven ports (output), adapter pattern, dependency rule enforcement, framework-free domain model, ArchUnit fitness functions, and relationship to Clean Architecture and DDD bounded contexts. References Cockburn 2005, Hombergs 2023, Vernon IDDD. |
+| `agents/hex-arch-engineer.md` | Expert in hexagonal architecture. Covers driving ports (input), driven ports (output), adapter pattern, dependency rule enforcement, framework-free domain model, ArchUnit fitness functions, and relationship to Clean Architecture and DDD bounded contexts. References Cockburn 2005, Hombergs 2023, Vernon IDDD. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/hex-arch/COMMAND.md` | `/hex-arch analyze|scaffold|check-deps|test-adapter` — compliance audit, use case scaffolding (driving port + interactor + adapter), dependency direction verification, and in-memory test adapter generation. |
+| `commands/hex-arch.md` | `/hex-arch analyze|scaffold|check-deps|test-adapter` — compliance audit, use case scaffolding (driving port + interactor + adapter), dependency direction verification, and in-memory test adapter generation. |
 
 ### Skills
 

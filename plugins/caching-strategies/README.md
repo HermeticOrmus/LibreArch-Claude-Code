@@ -8,13 +8,13 @@ Designs, audits, and debugs caching layers for distributed systems. Covers Redis
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/caching-architect/AGENT.md` | Expert in Redis (data structures, Cluster, Sentinel), Memcached, CDN (Fastly, CloudFront, Cloudflare), Caffeine in-process cache. PER algorithm, write strategies, stampede prevention, connection pooling. References Fowler, Facebook Memcached paper, Vattani PER paper. |
+| `agents/caching-architect.md` | Expert in Redis (data structures, Cluster, Sentinel), Memcached, CDN (Fastly, CloudFront, Cloudflare), Caffeine in-process cache. PER algorithm, write strategies, stampede prevention, connection pooling. References Fowler, Facebook Memcached paper, Vattani PER paper. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/cache/COMMAND.md` | `/cache analyze|design|invalidate|benchmark` — access pattern analysis, cache topology and key schema design, invalidation strategy, Redis metrics interpretation. |
+| `commands/cache.md` | `/cache analyze|design|invalidate|benchmark` — access pattern analysis, cache topology and key schema design, invalidation strategy, Redis metrics interpretation. |
 
 ### Skills
 

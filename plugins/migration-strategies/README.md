@@ -8,13 +8,13 @@ System migration patterns for extracting services from monoliths, zero-downtime 
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/migration-architect/AGENT.md` | Expert in low-risk migration execution. Covers strangler fig (proxy layer, incremental path migration), branch by abstraction (interface-driven replacement), parallel run (shadow mode, reconciliation), expand-contract schema migration (zero-downtime rename/split), blue-green and canary deployment, and API deprecation with RFC 8594 Sunset headers. References Newman 2019, Fowler, Sadalage/Fowler 2006. |
+| `agents/migration-architect.md` | Expert in low-risk migration execution. Covers strangler fig (proxy layer, incremental path migration), branch by abstraction (interface-driven replacement), parallel run (shadow mode, reconciliation), expand-contract schema migration (zero-downtime rename/split), blue-green and canary deployment, and API deprecation with RFC 8594 Sunset headers. References Newman 2019, Fowler, Sadalage/Fowler 2006. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/migrate/COMMAND.md` | `/migrate plan|strangle|schema|validate` — strategy selection, strangler fig phase sequencing, expand-contract SQL migration design, and parallel run with cutover criteria. |
+| `commands/migrate.md` | `/migrate plan|strangle|schema|validate` — strategy selection, strangler fig phase sequencing, expand-contract SQL migration design, and parallel run with cutover criteria. |
 
 ### Skills
 

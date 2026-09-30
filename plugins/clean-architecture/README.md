@@ -8,13 +8,13 @@ Designs, audits, and enforces Clean Architecture (Robert C. Martin). Covers the 
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/clean-arch-engineer/AGENT.md` | Expert in Clean Architecture, Hexagonal Architecture (Cockburn), Onion Architecture (Palermo). Use case interactors, output port interfaces, presenter/view model separation, framework-free testing, ArchUnit fitness functions. References Martin (2017), Cockburn (2005), Hombergs (2023). |
+| `agents/clean-arch-engineer.md` | Expert in Clean Architecture, Hexagonal Architecture (Cockburn), Onion Architecture (Palermo). Use case interactors, output port interfaces, presenter/view model separation, framework-free testing, ArchUnit fitness functions. References Martin (2017), Cockburn (2005), Hombergs (2023). |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/clean-arch/COMMAND.md` | `/clean-arch analyze|scaffold|check-deps|test` — violation audit, feature scaffolding with all layers, per-import dependency analysis, framework-free test generation. |
+| `commands/clean-arch.md` | `/clean-arch analyze|scaffold|check-deps|test` — violation audit, feature scaffolding with all layers, per-import dependency analysis, framework-free test generation. |
 
 ### Skills
 

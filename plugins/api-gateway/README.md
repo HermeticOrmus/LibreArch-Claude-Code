@@ -8,13 +8,13 @@ Designs, configures, and audits API gateway layers for microservices architectur
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/api-gateway-architect/AGENT.md` | Deep expertise in Kong, AWS API Gateway, Traefik, Envoy, Nginx/OpenResty. Token bucket/sliding window/leaky bucket algorithms. JWT validation with JWKS caching. BFF topology design. Circuit breaking at the edge. |
+| `agents/api-gateway-architect.md` | Deep expertise in Kong, AWS API Gateway, Traefik, Envoy, Nginx/OpenResty. Token bucket/sliding window/leaky bucket algorithms. JWT validation with JWKS caching. BFF topology design. Circuit breaking at the edge. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/api-gateway/COMMAND.md` | `/api-gateway design|configure|secure|monitor` — topology design, technology-specific config generation (Kong YAML, Nginx conf, Envoy YAML), auth strategy, observability setup. |
+| `commands/api-gateway.md` | `/api-gateway design|configure|secure|monitor` — topology design, technology-specific config generation (Kong YAML, Nginx conf, Envoy YAML), auth strategy, observability setup. |
 
 ### Skills
 

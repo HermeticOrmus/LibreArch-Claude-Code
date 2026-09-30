@@ -8,13 +8,13 @@ Designs and analyzes distributed system algorithms. Covers Raft consensus (Ongar
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/distributed-systems-architect/AGENT.md` | Expert in Raft leader election, Paxos, Redlock (and its critiques), SWIM gossip protocol, consistent hashing with virtual nodes, CAP/PACELC, fencing tokens, partition handling. References Ongaro/Ousterhout (2014), Lamport, Kleppmann, Kingsbury (Jepsen). |
+| `agents/distributed-systems-architect.md` | Expert in Raft leader election, Paxos, Redlock (and its critiques), SWIM gossip protocol, consistent hashing with virtual nodes, CAP/PACELC, fencing tokens, partition handling. References Ongaro/Ousterhout (2014), Lamport, Kleppmann, Kingsbury (Jepsen). |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/distributed/COMMAND.md` | `/distributed design|simulate|debug|prove` — component design with algorithm selection, partition failure simulation with traced outcomes, split-brain debugging, safety/liveness property verification. |
+| `commands/distributed.md` | `/distributed design|simulate|debug|prove` — component design with algorithm selection, partition failure simulation with traced outcomes, split-brain debugging, safety/liveness property verification. |
 
 ### Skills
 

@@ -8,13 +8,13 @@ Message broker architecture for RabbitMQ, Kafka, AWS SQS/SNS, and Azure Service 
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/messaging-architect/AGENT.md` | Expert in broker selection and messaging patterns. Covers RabbitMQ exchange types (direct, topic, fanout, headers), Kafka partition strategy and consumer groups, SQS/SNS fan-out, delivery semantics (at-most-once, at-least-once, exactly-once), DLQ design, prefetch/backpressure, and competing consumers. References Hohpe/Woolf EIP 2003, Kleppmann DDIA Chapter 11. |
+| `agents/messaging-architect.md` | Expert in broker selection and messaging patterns. Covers RabbitMQ exchange types (direct, topic, fanout, headers), Kafka partition strategy and consumer groups, SQS/SNS fan-out, delivery semantics (at-most-once, at-least-once, exactly-once), DLQ design, prefetch/backpressure, and competing consumers. References Hohpe/Woolf EIP 2003, Kleppmann DDIA Chapter 11. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/message-queue/COMMAND.md` | `/message-queue design|configure|debug|dlq` — broker and topology selection, consumer delivery configuration, consumer lag debugging, and DLQ workflow design with replay procedures. |
+| `commands/message-queue.md` | `/message-queue design|configure|debug|dlq` — broker and topology selection, consumer delivery configuration, consumer lag debugging, and DLQ workflow design with replay procedures. |
 
 ### Skills
 

@@ -8,13 +8,13 @@ Designs and configures circuit breakers, bulkheads, retry strategies, and timeou
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/resilience-engineer/AGENT.md` | Expert in Resilience4j, Hystrix (reference), Polly. Circuit breaker state machine (Closed/Open/Half-Open), bulkhead isolation, exponential backoff with jitter (Brooker 2015), cascading timeout budgets, health endpoint design. References Nygard's _Release It!_. |
+| `agents/resilience-engineer.md` | Expert in Resilience4j, Hystrix (reference), Polly. Circuit breaker state machine (Closed/Open/Half-Open), bulkhead isolation, exponential backoff with jitter (Brooker 2015), cascading timeout budgets, health endpoint design. References Nygard's _Release It!_. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/circuit-breaker/COMMAND.md` | `/circuit-breaker configure|test|monitor|tune` — configuration generation, chaos test design, metrics/alert setup, threshold tuning based on false positive/negative analysis. |
+| `commands/circuit-breaker.md` | `/circuit-breaker configure|test|monitor|tune` — configuration generation, chaos test design, metrics/alert setup, threshold tuning based on false positive/negative analysis. |
 
 ### Skills
 

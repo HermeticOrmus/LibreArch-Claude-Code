@@ -8,13 +8,13 @@ Horizontal and vertical scaling, AKF Scale Cube, load balancing, auto-scaling (H
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/scalability-architect/AGENT.md` | Expert in scaling strategy and capacity planning. Covers AKF Scale Cube (X/Y/Z axis), load balancing algorithms, stateless session design (Redis vs JWT), Kubernetes HPA and KEDA, database read replica routing, queue-based load leveling, and Little's Law for capacity calculation. References Abbott/Fisher 2015, Kleppmann DDIA, AWS Well-Architected, Google SRE Book. |
+| `agents/scalability-architect.md` | Expert in scaling strategy and capacity planning. Covers AKF Scale Cube (X/Y/Z axis), load balancing algorithms, stateless session design (Redis vs JWT), Kubernetes HPA and KEDA, database read replica routing, queue-based load leveling, and Little's Law for capacity calculation. References Abbott/Fisher 2015, Kleppmann DDIA, AWS Well-Architected, Google SRE Book. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/scale/COMMAND.md` | `/scale analyze|design|autoscale|capacity` — bottleneck identification, AKF-based scaling strategy, HPA/KEDA configuration, and capacity calculation for target traffic levels. |
+| `commands/scale.md` | `/scale analyze|design|autoscale|capacity` — bottleneck identification, AKF-based scaling strategy, HPA/KEDA configuration, and capacity calculation for target traffic levels. |
 
 ### Skills
 

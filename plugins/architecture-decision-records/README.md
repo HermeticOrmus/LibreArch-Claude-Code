@@ -8,13 +8,13 @@ Creates, maintains, supersedes, and audits Architecture Decision Records. Covers
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/adr-curator/AGENT.md` | Expert in ADR formats (Nygard, MADR, Y-Statement, RFC-style), decision lifecycle, reversibility assessment, fitness function design. References Nygard (2011), Kopp (MADR), Ford/Parsons/Kua (_Building Evolutionary Architectures_). |
+| `agents/adr-curator.md` | Expert in ADR formats (Nygard, MADR, Y-Statement, RFC-style), decision lifecycle, reversibility assessment, fitness function design. References Nygard (2011), Kopp (MADR), Ford/Parsons/Kua (_Building Evolutionary Architectures_). |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/adr/COMMAND.md` | `/adr new|list|supersede|export` — structured process for writing ADRs with Y-Statement summaries, auditing decision inventory, managing supersession, and exporting decision indexes. |
+| `commands/adr.md` | `/adr new|list|supersede|export` — structured process for writing ADRs with Y-Statement summaries, auditing decision inventory, managing supersession, and exporting decision indexes. |
 
 ### Skills
 

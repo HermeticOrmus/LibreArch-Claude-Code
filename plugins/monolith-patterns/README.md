@@ -8,13 +8,13 @@ Modular monolith design, module boundary enforcement, vertical slicing, decompos
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/monolith-architect/AGENT.md` | Expert in modular monolith architecture. Covers module structure by bounded context, public facade pattern, in-process events for decoupling, ArchUnit boundary enforcement, vertical slicing, data ownership per module, and decomposition readiness criteria. References Fowler MonolithFirst 2015, Newman 2021, Grzybek modular-monolith-with-ddd. |
+| `agents/monolith-architect.md` | Expert in modular monolith architecture. Covers module structure by bounded context, public facade pattern, in-process events for decoupling, ArchUnit boundary enforcement, vertical slicing, data ownership per module, and decomposition readiness criteria. References Fowler MonolithFirst 2015, Newman 2021, Grzybek modular-monolith-with-ddd. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/monolith/COMMAND.md` | `/monolith design|enforce|assess|slice` — module structure design using bounded contexts, ArchUnit enforcement generation, decomposition readiness scoring, and horizontal-to-vertical slice reorganization. |
+| `commands/monolith.md` | `/monolith design|enforce|assess|slice` — module structure design using bounded contexts, ArchUnit enforcement generation, decomposition readiness scoring, and horizontal-to-vertical slice reorganization. |
 
 ### Skills
 

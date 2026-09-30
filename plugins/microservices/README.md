@@ -8,13 +8,13 @@ Microservice decomposition, inter-service communication, data isolation, service
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/microservices-architect/AGENT.md` | Expert in service decomposition by business capability and DDD bounded context, REST vs gRPC vs async events, data isolation (no shared databases), service mesh (Istio/Linkerd mTLS), OpenTelemetry distributed tracing, health checks (liveness/readiness), and when not to use microservices. References Newman 2021, Richardson 2018, Fowler MonolithFirst 2015. |
+| `agents/microservices-architect.md` | Expert in service decomposition by business capability and DDD bounded context, REST vs gRPC vs async events, data isolation (no shared databases), service mesh (Istio/Linkerd mTLS), OpenTelemetry distributed tracing, health checks (liveness/readiness), and when not to use microservices. References Newman 2021, Richardson 2018, Fowler MonolithFirst 2015. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/microservices/COMMAND.md` | `/microservices decompose|communicate|audit|observe` — boundary identification from domain capabilities, sync vs async communication design, shared database and coupling auditing, and OpenTelemetry observability setup. |
+| `commands/microservices.md` | `/microservices decompose|communicate|audit|observe` — boundary identification from domain capabilities, sync vs async communication design, shared database and coupling auditing, and OpenTelemetry observability setup. |
 
 ### Skills
 
