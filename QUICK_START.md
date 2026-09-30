@@ -15,6 +15,21 @@ cd ~/projects/LibreArch-Claude-Code
 ./setup.sh
 ```
 
+### Install in Grok Build
+
+Grok Build reads the same plugin folders. Add the marketplace and install a plugin, or install one plugin straight from its folder:
+
+```bash
+grok plugin marketplace add HermeticOrmus/LibreArch-Claude-Code
+grok plugin install domain-driven-design@libre-arch --trust
+# or, without the marketplace:
+grok plugin install HermeticOrmus/LibreArch-Claude-Code#plugins/domain-driven-design --trust
+```
+
+From a clone, `./setup.sh --grok` installs every plugin through the `grok` CLI. Start a new Grok session to load them. The `libre-arch-hooks` plugin uses a hook format Grok supports, but it has not been verified in a live Grok session.
+
+### First prompt
+
 Restart Claude Code, then try:
 
 ```
