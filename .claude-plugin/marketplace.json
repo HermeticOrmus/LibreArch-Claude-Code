@@ -128,6 +128,12 @@
       "source": "./plugins/system-design",
       "description": "System design: requirements, back-of-envelope estimation, component selection, and explicit trade-offs.",
       "version": "1.0.0"
+    },
+    {
+      "name": "libre-arch-hooks",
+      "source": "./plugins/libre-arch-hooks",
+      "description": "Optional LibreArch hooks: an architecture summary at session start, a confirmation prompt before Claude reads or edits secrets files, and a dependency-direction scan after each code edit.",
+      "version": "1.0.0"
     }
   ]
 }

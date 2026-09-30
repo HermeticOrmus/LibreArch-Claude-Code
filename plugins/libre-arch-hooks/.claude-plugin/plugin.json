@@ -1,0 +1,19 @@
+{
+  "name": "libre-arch-hooks",
+  "version": "1.0.0",
+  "description": "Optional LibreArch hooks: an architecture summary at session start, a confirmation prompt before Claude reads or edits secrets files, and a dependency-direction scan after each code edit.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "hooks",
+    "dependency-rule",
+    "clean-architecture",
+    "secrets"
+  ]
+}
