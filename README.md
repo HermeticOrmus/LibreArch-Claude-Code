@@ -73,7 +73,7 @@ Grok Build reads the same plugin folders. Add the marketplace, then install any 
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreArch-Claude-Code
-grok plugin install domain-driven-design@libre-arch --trust
+grok plugin install domain-driven-design@LibreArch-Claude-Code --trust
 ```
 
 Or install one plugin straight from its folder, without adding the marketplace:
