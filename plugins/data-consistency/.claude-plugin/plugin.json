@@ -1,0 +1,20 @@
+{
+  "name": "data-consistency",
+  "version": "1.0.0",
+  "description": "Data consistency: CAP and PACELC, consistency models, CRDTs, vector clocks, quorums, two-phase commit, and sagas.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "consistency",
+    "cap-theorem",
+    "crdt",
+    "vector-clocks",
+    "distributed-transactions"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "message-queues",
+  "version": "1.0.0",
+  "description": "Message brokers: RabbitMQ, Kafka, SQS/SNS, and Azure Service Bus topology, delivery semantics, and dead letter queues.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "message-queues",
+    "rabbitmq",
+    "kafka",
+    "sqs",
+    "dead-letter-queue"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "clean-architecture",
+  "version": "1.0.0",
+  "description": "Clean Architecture: the dependency rule, use case interactors, ports, and business logic free of framework coupling.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "clean-architecture",
+    "dependency-rule",
+    "use-cases",
+    "archunit"
+  ]
+}

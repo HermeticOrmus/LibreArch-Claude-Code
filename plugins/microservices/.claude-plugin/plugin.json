@@ -1,0 +1,19 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "Microservices: service boundaries, inter-service communication, data ownership, service mesh, and observability.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "microservices",
+    "service-mesh",
+    "grpc",
+    "observability"
+  ]
+}

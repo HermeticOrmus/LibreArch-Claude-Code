@@ -1,0 +1,20 @@
+{
+  "name": "distributed-systems",
+  "version": "1.0.0",
+  "description": "Distributed systems: consensus with Raft and Paxos, leader election, distributed locks, gossip, consistent hashing, and partitions.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "distributed-systems",
+    "raft",
+    "paxos",
+    "consensus",
+    "consistent-hashing"
+  ]
+}

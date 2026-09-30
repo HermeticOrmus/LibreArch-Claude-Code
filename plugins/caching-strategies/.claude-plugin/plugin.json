@@ -1,0 +1,20 @@
+{
+  "name": "caching-strategies",
+  "version": "1.0.0",
+  "description": "Caching strategy: cache-aside, write-through, write-behind, invalidation, stampede prevention, Redis, and CDN caching.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "caching",
+    "redis",
+    "cdn",
+    "cache-invalidation",
+    "performance"
+  ]
+}

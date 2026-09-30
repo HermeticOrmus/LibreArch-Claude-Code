@@ -1,0 +1,20 @@
+{
+  "name": "database-patterns",
+  "version": "1.0.0",
+  "description": "Database architecture: repositories, Unit of Work, N+1 prevention, read replicas, connection pools, and sharding.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "database",
+    "repository-pattern",
+    "sharding",
+    "n-plus-one",
+    "connection-pool"
+  ]
+}

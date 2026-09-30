@@ -1,0 +1,133 @@
+{
+  "name": "libre-arch",
+  "owner": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "metadata": {
+    "description": "Software architecture plugins for Claude Code: DDD, microservices, distributed systems, event-driven design, resilience, data, and migration patterns.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "api-gateway",
+      "source": "./plugins/api-gateway",
+      "description": "API gateway design: gateway topology, backend-for-frontend, routing, edge authentication, rate limiting, and API versioning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "architecture-decision-records",
+      "source": "./plugins/architecture-decision-records",
+      "description": "Architecture Decision Records: write, maintain, supersede, and enforce decisions in Nygard or MADR format.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "caching-strategies",
+      "source": "./plugins/caching-strategies",
+      "description": "Caching strategy: cache-aside, write-through, write-behind, invalidation, stampede prevention, Redis, and CDN caching.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "circuit-breaker",
+      "source": "./plugins/circuit-breaker",
+      "description": "Resilience patterns: circuit breakers, bulkheads, timeouts, retries with jitter, and fallbacks that stop cascading failures.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "clean-architecture",
+      "source": "./plugins/clean-architecture",
+      "description": "Clean Architecture: the dependency rule, use case interactors, ports, and business logic free of framework coupling.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cqrs-event-sourcing",
+      "source": "./plugins/cqrs-event-sourcing",
+      "description": "CQRS and event sourcing: command handlers, event stores, projections, snapshots, and event versioning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-consistency",
+      "source": "./plugins/data-consistency",
+      "description": "Data consistency: CAP and PACELC, consistency models, CRDTs, vector clocks, quorums, two-phase commit, and sagas.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "database-patterns",
+      "source": "./plugins/database-patterns",
+      "description": "Database architecture: repositories, Unit of Work, N+1 prevention, read replicas, connection pools, and sharding.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "distributed-systems",
+      "source": "./plugins/distributed-systems",
+      "description": "Distributed systems: consensus with Raft and Paxos, leader election, distributed locks, gossip, consistent hashing, and partitions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "domain-driven-design",
+      "source": "./plugins/domain-driven-design",
+      "description": "Domain-Driven Design: bounded contexts, context maps, aggregates, value objects, domain events, and event storming.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "event-driven",
+      "source": "./plugins/event-driven",
+      "description": "Event-driven architecture: broker choice, choreography vs orchestration, the outbox pattern, dead letter queues, and schema evolution.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "hexagonal-architecture",
+      "source": "./plugins/hexagonal-architecture",
+      "description": "Hexagonal architecture: ports and adapters, dependency direction, and framework-free testing of the application core.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "message-queues",
+      "source": "./plugins/message-queues",
+      "description": "Message brokers: RabbitMQ, Kafka, SQS/SNS, and Azure Service Bus topology, delivery semantics, and dead letter queues.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "microservices",
+      "source": "./plugins/microservices",
+      "description": "Microservices: service boundaries, inter-service communication, data ownership, service mesh, and observability.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "migration-strategies",
+      "source": "./plugins/migration-strategies",
+      "description": "System migration: strangler fig, branch by abstraction, parallel run, expand-contract schema changes, and canary cutover.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monolith-patterns",
+      "source": "./plugins/monolith-patterns",
+      "description": "Modular monoliths: module boundaries, vertical slices, and knowing when a monolith wins and when to split.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "saga-patterns",
+      "source": "./plugins/saga-patterns",
+      "description": "Sagas: orchestration vs choreography, compensating transactions, isolation countermeasures, and failure recovery.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scalability-patterns",
+      "source": "./plugins/scalability-patterns",
+      "description": "Scalability: horizontal and vertical scaling, load balancing, auto-scaling, read/write splitting, and capacity planning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "service-discovery",
+      "source": "./plugins/service-discovery",
+      "description": "Service discovery: Kubernetes DNS, Consul, and Eureka, health checks, and client-side vs server-side discovery.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "system-design",
+      "source": "./plugins/system-design",
+      "description": "System design: requirements, back-of-envelope estimation, component selection, and explicit trade-offs.",
+      "version": "1.0.0"
+    }
+  ]
+}

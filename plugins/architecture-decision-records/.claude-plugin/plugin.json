@@ -1,0 +1,20 @@
+{
+  "name": "architecture-decision-records",
+  "version": "1.0.0",
+  "description": "Architecture Decision Records: write, maintain, supersede, and enforce decisions in Nygard or MADR format.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreArch-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "adr",
+    "madr",
+    "decision-records",
+    "documentation",
+    "fitness-functions"
+  ]
+}
