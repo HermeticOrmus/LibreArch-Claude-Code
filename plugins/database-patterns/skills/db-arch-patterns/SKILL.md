@@ -1,3 +1,8 @@
+---
+name: "db-arch-patterns"
+description: "Data access patterns with code: repositories with Specification queries, Unit of Work transaction boundaries, DTO projections against N+1 queries, HikariCP pool sizing, and a consistent-hashing shard router. Use when designing or reviewing a data access layer."
+---
+
 # Database Architecture Patterns
 
 > Named patterns with code for Repository interface, Unit of Work, Specification pattern, N+1 prevention, read replica routing, connection pool sizing, and sharding strategies.

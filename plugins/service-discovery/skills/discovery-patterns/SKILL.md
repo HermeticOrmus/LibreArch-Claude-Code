@@ -1,3 +1,8 @@
+---
+name: "discovery-patterns"
+description: "Service discovery patterns with configuration: health-gated Kubernetes Services, headless Services for StatefulSets, Consul registration with health checks, LoadBalancer Services, and Spring Boot readiness checks. Use when services need to find each other reliably."
+---
+
 # Discovery Patterns
 
 > Named patterns with code for Kubernetes service routing, Consul registration with health checks, headless service for StatefulSets, and client-side load balancing.

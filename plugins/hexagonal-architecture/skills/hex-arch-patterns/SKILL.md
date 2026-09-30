@@ -1,3 +1,8 @@
+---
+name: "hex-arch-patterns"
+description: "Hexagonal architecture patterns with code: package layout, driving ports with use case interactors, driven ports with JPA adapters, in-memory test adapters, and ArchUnit fitness tests. Use when building or reviewing a ports-and-adapters service."
+---
+
 # Hexagonal Architecture Patterns
 
 > Named patterns with code for driving ports, driven ports, adapter implementation, in-memory test adapters, and ArchUnit fitness functions.

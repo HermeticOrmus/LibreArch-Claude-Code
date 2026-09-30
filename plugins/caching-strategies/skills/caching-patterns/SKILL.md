@@ -1,3 +1,8 @@
+---
+name: "caching-patterns"
+description: "Caching patterns with code: cache-aside, write-through, write-behind for counters, probabilistic early recomputation against stampedes, Redis sorted-set rate limiting, cache warming, and the anti-patterns that leak data or serve stale results. Use when adding or reviewing a cache."
+---
+
 # Caching Patterns
 
 > Named patterns with code examples for cache-aside, write-through, write-behind, cache stampede prevention (PER), Redis data structure selection, CDN cache headers, and cache warming strategies.

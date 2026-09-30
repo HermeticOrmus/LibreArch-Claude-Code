@@ -1,3 +1,8 @@
+---
+name: "messaging-patterns"
+description: "Messaging patterns with code: RabbitMQ topic exchanges with dead letter queues, SNS to SQS fan-out in AWS CDK, Kafka consumer groups with idempotency, and competing consumers. Use when wiring services together through a message broker."
+---
+
 # Messaging Patterns
 
 > Named patterns with code for RabbitMQ topology, Kafka consumer group, SQS with DLQ, competing consumers, message idempotency, and dead letter queue handling.

@@ -1,3 +1,8 @@
+---
+name: "system-design-patterns"
+description: "Worked system design patterns: back-of-envelope capacity estimation, URL shortener, sliding window rate limiter in Redis, news feed fan-out, and typeahead search, plus the design anti-patterns to avoid. Use when working a system design problem."
+---
+
 # System Design Patterns
 
 > Named patterns with code and calculations for URL shortener, rate limiter, consistent hashing, news feed fan-out, and back-of-envelope capacity estimation.

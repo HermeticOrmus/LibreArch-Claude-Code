@@ -1,3 +1,8 @@
+---
+name: "resilience-patterns"
+description: "Resilience patterns with code: Resilience4j circuit breakers and semaphore bulkheads, exponential backoff with full jitter, cascading timeout budgets, health check endpoints, and anti-patterns such as retrying non-idempotent calls. Use when hardening calls to downstream services."
+---
+
 # Resilience Patterns
 
 > Named patterns with code examples for circuit breakers (Resilience4j), bulkhead isolation, exponential backoff with jitter, timeout budgets, fallback hierarchies, and health endpoint design.

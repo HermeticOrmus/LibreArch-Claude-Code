@@ -1,3 +1,8 @@
+---
+name: "distributed-patterns"
+description: "Distributed systems patterns with code: a consistent hashing ring, a simplified Raft leader election state machine, fencing tokens for safe locks, and SWIM gossip failure detection. Use when implementing coordination, partitioning, or failure detection."
+---
+
 # Distributed Systems Patterns
 
 > Named patterns with code for consistent hashing, Raft leader election steps, Redlock distributed locking, gossip fanout, partition handling, and fencing tokens.

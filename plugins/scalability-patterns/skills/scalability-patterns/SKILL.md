@@ -1,3 +1,8 @@
+---
+name: "scalability-patterns"
+description: "Scaling patterns with code: Kubernetes HPA on custom metrics, KEDA scaling for Kafka consumers, stateless sessions in Redis, read/write splitting in Spring Boot, and queue-based load leveling with SQS and Lambda. Use when scaling a service or planning capacity."
+---
+
 # Scalability Patterns
 
 > Named patterns with code for Kubernetes HPA, KEDA queue-based scaling, database read routing, stateless session design, and queue-based load leveling.

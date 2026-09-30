@@ -1,3 +1,8 @@
+---
+name: "adr-patterns"
+description: "Architecture Decision Record templates and practices: complete MADR and Nygard templates, Y-statement summaries, supersession, rejected ADRs, ArchUnit fitness functions, and linking ADRs from code. Use when writing, reviewing, or organizing ADRs."
+---
+
 # ADR Patterns
 
 > Named patterns, complete templates, and anti-patterns for Architecture Decision Records. Covers Nygard format, MADR, Y-Statements, status lifecycle, fitness functions, and linking decisions to code.
