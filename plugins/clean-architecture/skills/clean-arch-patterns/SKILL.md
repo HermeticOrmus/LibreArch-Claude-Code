@@ -1,3 +1,8 @@
+---
+name: "clean-arch-patterns"
+description: "Clean Architecture patterns with code: a folder structure that enforces the dependency rule, entities that guard their invariants, presenter and view model separation, framework-free use case tests, and ArchUnit rules. Use when building or reviewing a Clean Architecture codebase."
+---
+
 # Clean Architecture Patterns
 
 > Named patterns with code examples for use case design, entity invariant enforcement, repository port design, presenter/view model separation, framework-free testing, and ArchUnit enforcement of the dependency rule.

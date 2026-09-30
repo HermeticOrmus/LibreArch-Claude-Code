@@ -1,3 +1,8 @@
+---
+name: "migration-patterns"
+description: "Migration patterns with code: a strangler fig proxy, expand-contract schema migration with Flyway, parallel run with reconciliation, branch by abstraction, and canary rollout with Argo Rollouts. Use when replacing a system or changing a live schema."
+---
+
 # Migration Patterns
 
 > Named patterns with code for strangler fig routing, expand-contract schema migration, parallel run, branch by abstraction, and canary deployment with traffic splitting.

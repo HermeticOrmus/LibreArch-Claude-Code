@@ -1,3 +1,8 @@
+---
+name: "consistency-patterns"
+description: "Consistency patterns with code: G-Counter and OR-Set CRDTs, read-your-writes session tokens, Cassandra quorum settings, and vector clock conflict detection, plus anti-patterns such as 2PC across microservices. Use when choosing or implementing a consistency model."
+---
+
 # Data Consistency Patterns
 
 > Named patterns with code for CRDT implementations, vector clock comparison, quorum configuration, 2PC protocol, read-your-writes consistency, and anti-entropy.

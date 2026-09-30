@@ -1,3 +1,8 @@
+---
+name: "microservices-patterns"
+description: "Microservices patterns with code: Spring Boot health checks for Kubernetes, OpenTelemetry tracing, versioned Nginx gateway routing, gRPC service definitions, and service-to-service mTLS with Istio. Use when building or reviewing a microservice fleet."
+---
+
 # Microservices Patterns
 
 > Named patterns with code for service decomposition, health checks, distributed tracing, API versioning, and inter-service communication.

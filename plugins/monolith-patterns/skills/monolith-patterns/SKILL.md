@@ -1,3 +1,8 @@
+---
+name: "monolith-patterns"
+description: "Modular monolith patterns with code: public module facades, in-process events between modules, ArchUnit boundary rules, vertical slice organization, and module-scoped integration tests. Use when structuring or untangling a monolith."
+---
+
 # Monolith Patterns
 
 > Named patterns with code for modular monolith structure, public module facade, in-process events, ArchUnit boundary enforcement, and vertical slicing.

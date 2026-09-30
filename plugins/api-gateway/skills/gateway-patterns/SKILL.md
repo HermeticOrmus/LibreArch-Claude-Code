@@ -1,3 +1,8 @@
+---
+name: "gateway-patterns"
+description: "API gateway patterns with configuration and code: token bucket rate limiting in Redis and Lua, JWT validation at the edge, backend-for-frontend topology, API versioning with Sunset headers, request ID propagation, and the gateway anti-patterns to avoid. Use when building or reviewing a gateway layer."
+---
+
 # Gateway Patterns
 
 > Named patterns, configuration examples, and anti-patterns for API gateway design. Covers rate limiting algorithms, JWT validation, BFF topology, API versioning, and circuit breaking at the edge.

@@ -1,3 +1,8 @@
+---
+name: "cqrs-patterns"
+description: "CQRS and event sourcing patterns with code: command handlers, event-sourced aggregate roots, PostgreSQL read model projections, snapshots, event upcasting, and optimistic concurrency retries. Use when implementing or reviewing an event-sourced system."
+---
+
 # CQRS/Event Sourcing Patterns
 
 > Named patterns with code for command handlers, event store append with optimistic concurrency, projection design, snapshot strategy, aggregate reconstitution, and event upcasting.

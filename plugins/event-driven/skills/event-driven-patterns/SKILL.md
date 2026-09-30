@@ -1,3 +1,8 @@
+---
+name: "event-driven-patterns"
+description: "Event-driven patterns with code: CloudEvents envelopes, Kafka producers and idempotent consumers, the outbox pattern, DLQ retry handlers, and Avro schema evolution. Use when publishing or consuming events between services."
+---
+
 # Event-Driven Patterns
 
 > Named patterns with code for CloudEvents envelope, Kafka producer/consumer, outbox pattern, saga choreography, DLQ retry, and event schema evolution.

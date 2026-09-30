@@ -1,3 +1,8 @@
+---
+name: "saga-patterns"
+description: "Saga patterns with code: an orchestrated saga in Temporal, a choreographed saga with compensating Kafka events, the semantic lock countermeasure, and idempotent compensating transactions. Use when a business process spans several services."
+---
+
 # Saga Patterns
 
 > Named patterns with code for orchestrated saga with Temporal, choreography with compensating events, saga state machine, semantic lock countermeasure, and idempotent compensating transactions.
