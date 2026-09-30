@@ -8,13 +8,13 @@ Structured system design methodology: requirements clarification, back-of-envelo
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/system-designer/AGENT.md` | Expert in holistic system design. Covers the 5-step design process (requirements, estimation, high-level, deep dive, trade-offs), back-of-envelope estimation with latency/throughput reference numbers, data store selection criteria, common system design patterns (URL shortener, rate limiter, news feed, distributed cache, autocomplete), SLA and availability math. References Kleppmann DDIA 2017, Xu System Design Interview 2020/2022. |
+| `agents/system-designer.md` | Expert in holistic system design. Covers the 5-step design process (requirements, estimation, high-level, deep dive, trade-offs), back-of-envelope estimation with latency/throughput reference numbers, data store selection criteria, common system design patterns (URL shortener, rate limiter, news feed, distributed cache, autocomplete), SLA and availability math. References Kleppmann DDIA 2017, Xu System Design Interview 2020/2022. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/system-design/COMMAND.md` | `/system-design estimate|design|deep-dive|review` — capacity estimation with explicit assumptions, full structured design from requirements through trade-offs, component deep-dive (caching/database/API), and architecture review for gaps and failure modes. |
+| `commands/system-design.md` | `/system-design estimate|design|deep-dive|review` — capacity estimation with explicit assumptions, full structured design from requirements through trade-offs, component deep-dive (caching/database/API), and architecture review for gaps and failure modes. |
 
 ### Skills
 

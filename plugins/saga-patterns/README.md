@@ -8,13 +8,13 @@ Distributed saga design for orchestration (Temporal, Conductor, Axon) and choreo
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/saga-architect/AGENT.md` | Expert in saga design and failure modes. Covers orchestration vs choreography decision criteria, compensating transaction design (idempotency, commutativity), Temporal durable execution model, isolation anomalies (dirty read, lost update, fuzzy read), semantic lock and other countermeasures, and saga failure recovery. References Richardson 2018, Garcia-Molina/Salem 1987, Temporal docs. |
+| `agents/saga-architect.md` | Expert in saga design and failure modes. Covers orchestration vs choreography decision criteria, compensating transaction design (idempotency, commutativity), Temporal durable execution model, isolation anomalies (dirty read, lost update, fuzzy read), semantic lock and other countermeasures, and saga failure recovery. References Richardson 2018, Garcia-Molina/Salem 1987, Temporal docs. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/saga/COMMAND.md` | `/saga design|compensate|debug|isolation` — saga step and compensation design, idempotent compensation definition, stuck saga diagnosis, and isolation anomaly countermeasure selection. |
+| `commands/saga.md` | `/saga design|compensate|debug|isolation` — saga step and compensation design, idempotent compensation definition, stuck saga diagnosis, and isolation anomaly countermeasure selection. |
 
 ### Skills
 

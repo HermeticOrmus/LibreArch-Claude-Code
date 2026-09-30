@@ -8,13 +8,13 @@ Service registry patterns, DNS-based discovery, Kubernetes Services, Consul regi
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/discovery-engineer/AGENT.md` | Expert in service discovery patterns. Covers client-side (Eureka, Ribbon) vs server-side discovery (Kubernetes Services, ALB), DNS-based discovery (CoreDNS, Consul DNS), Consul service registration with health checks, Kubernetes headless services for StatefulSets, readiness vs liveness health check design, and self-registration vs third-party registration. References Newman 2021, HashiCorp Consul docs, Kubernetes docs. |
+| `agents/discovery-engineer.md` | Expert in service discovery patterns. Covers client-side (Eureka, Ribbon) vs server-side discovery (Kubernetes Services, ALB), DNS-based discovery (CoreDNS, Consul DNS), Consul service registration with health checks, Kubernetes headless services for StatefulSets, readiness vs liveness health check design, and self-registration vs third-party registration. References Newman 2021, HashiCorp Consul docs, Kubernetes docs. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/service-discovery/COMMAND.md` | `/service-discovery design|health|debug|configure` — discovery pattern selection, health check design for liveness/readiness separation, DNS resolution debugging, and Kubernetes Service YAML generation. |
+| `commands/service-discovery.md` | `/service-discovery design|health|debug|configure` — discovery pattern selection, health check design for liveness/readiness separation, DNS resolution debugging, and Kubernetes Service YAML generation. |
 
 ### Skills
 

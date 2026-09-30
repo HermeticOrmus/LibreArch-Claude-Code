@@ -8,13 +8,13 @@ Designs and implements Command Query Responsibility Segregation (CQRS) and Event
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/cqrs-architect/AGENT.md` | Expert in Greg Young's CQRS (2010), Martin Fowler's event sourcing, EventStoreDB, Marten, Axon Framework. Command handler pattern, optimistic concurrency via stream versioning, aggregate reconstitution, snapshot strategy, projection design, event upcasting. |
+| `agents/cqrs-architect.md` | Expert in Greg Young's CQRS (2010), Martin Fowler's event sourcing, EventStoreDB, Marten, Axon Framework. Command handler pattern, optimistic concurrency via stream versioning, aggregate reconstitution, snapshot strategy, projection design, event upcasting. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/cqrs/COMMAND.md` | `/cqrs command|project|rebuild|snapshot` — command handler generation, projection design for specific query patterns, zero-downtime projection rebuild planning, snapshot threshold configuration. |
+| `commands/cqrs.md` | `/cqrs command|project|rebuild|snapshot` — command handler generation, projection design for specific query patterns, zero-downtime projection rebuild planning, snapshot threshold configuration. |
 
 ### Skills
 

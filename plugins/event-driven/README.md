@@ -8,13 +8,13 @@ Event-driven architecture patterns covering Kafka, AWS SNS/SQS, Azure Service Bu
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/event-architect/AGENT.md` | Expert in event-driven systems at scale. Covers broker selection (Kafka vs SQS vs RabbitMQ), CloudEvents specification, outbox pattern, choreography vs orchestration decision criteria, DLQ strategy, Kafka partition key selection, and Avro schema evolution with Confluent Schema Registry. |
+| `agents/event-architect.md` | Expert in event-driven systems at scale. Covers broker selection (Kafka vs SQS vs RabbitMQ), CloudEvents specification, outbox pattern, choreography vs orchestration decision criteria, DLQ strategy, Kafka partition key selection, and Avro schema evolution with Confluent Schema Registry. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/event-driven/COMMAND.md` | `/event-driven design|publish|consume|replay` — event topology design, outbox pattern for reliable publishing, consumer group configuration with idempotency, and Kafka offset replay for read model rebuilding. |
+| `commands/event-driven.md` | `/event-driven design|publish|consume|replay` — event topology design, outbox pattern for reliable publishing, consumer group configuration with idempotency, and Kafka offset replay for read model rebuilding. |
 
 ### Skills
 

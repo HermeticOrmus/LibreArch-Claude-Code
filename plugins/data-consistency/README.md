@@ -8,13 +8,13 @@ Designs consistency strategies for distributed systems. Covers CAP theorem (Brew
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/consistency-engineer/AGENT.md` | Expert in CAP/PACELC, consistency models (linearizable to eventual), CRDTs (Shapiro 2011), vector clocks (Lamport 1978), Amazon Dynamo quorum model, 2PC blocking analysis, Cassandra consistency levels. |
+| `agents/consistency-engineer.md` | Expert in CAP/PACELC, consistency models (linearizable to eventual), CRDTs (Shapiro 2011), vector clocks (Lamport 1978), Amazon Dynamo quorum model, 2PC blocking analysis, Cassandra consistency levels. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/consistency/COMMAND.md` | `/consistency analyze|design|test-scenarios|prove` — requirement classification, consistency strategy design, partition failure modeling, quorum/CRDT property verification. |
+| `commands/consistency.md` | `/consistency analyze|design|test-scenarios|prove` — requirement classification, consistency strategy design, partition failure modeling, quorum/CRDT property verification. |
 
 ### Skills
 

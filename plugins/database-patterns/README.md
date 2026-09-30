@@ -8,13 +8,13 @@ Designs, audits, and optimizes database access layers. Covers Repository pattern
 
 | Agent | Purpose |
 |-------|---------|
-| `agents/db-architect/AGENT.md` | Expert in Repository, Unit of Work, Specification patterns (Fowler). N+1 prevention (JOIN FETCH, @EntityGraph, DTO projection). Read replica routing. Consistent hashing for sharding. HikariCP pool sizing formula. PostgreSQL/JPA/Prisma specifics. |
+| `agents/db-architect.md` | Expert in Repository, Unit of Work, Specification patterns (Fowler). N+1 prevention (JOIN FETCH, @EntityGraph, DTO projection). Read replica routing. Consistent hashing for sharding. HikariCP pool sizing formula. PostgreSQL/JPA/Prisma specifics. |
 
 ### Commands
 
 | Command | Purpose |
 |---------|---------|
-| `commands/db-pattern/COMMAND.md` | `/db-pattern analyze|generate|optimize|test` — N+1 audit, repository interface generation, EXPLAIN ANALYZE interpretation, missing index detection, in-memory test doubles. |
+| `commands/db-pattern.md` | `/db-pattern analyze|generate|optimize|test` — N+1 audit, repository interface generation, EXPLAIN ANALYZE interpretation, missing index detection, in-memory test doubles. |
 
 ### Skills
 
