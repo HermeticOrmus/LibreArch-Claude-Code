@@ -22,32 +22,52 @@ Architecture decisions compound. The wrong choice at month 1 becomes a multi-qua
 
 ## The 20 plugins
 
-| Plugin | Domain |
-|---|---|
-| **domain-driven-design** ⭐ | Bounded contexts, aggregates, value objects, domain events |
-| system-design | High-level architecture, capacity planning, technology selection |
-| microservices | Service boundaries, communication patterns, data ownership |
-| monolith-patterns | Modular monolith, when monoliths win, when to split |
-| event-driven | Event sourcing, event-carried state transfer, eventual consistency |
-| cqrs-event-sourcing | Command Query Responsibility Segregation patterns |
-| hexagonal-architecture | Ports and adapters, dependency direction |
-| clean-architecture | Layered architecture, dependency rule, use cases |
-| distributed-systems | CAP, consensus (Raft, Paxos), Byzantine fault tolerance |
-| data-consistency | Strong vs eventual, saga patterns, 2PC, idempotency |
-| saga-patterns | Choreography vs orchestration, compensation, failure recovery |
-| api-gateway | BFF, routing, auth, rate limiting at the edge |
-| service-discovery | DNS-based, registry-based, sidecar (service mesh) |
-| message-queues | Kafka, RabbitMQ, SQS, NATS — when each fits |
-| caching-strategies | Cache-aside, write-through, write-behind, invalidation |
-| circuit-breaker | Resilience patterns, bulkheads, timeouts, retries |
-| database-patterns | Choice (RDBMS, document, K-V, graph, time-series), schema design |
-| scalability-patterns | Horizontal vs vertical, partitioning, sharding, replication |
-| migration-strategies | Strangler fig, branch-by-abstraction, dark launching |
-| architecture-decision-records | ADR format, when to write, decision logs |
+| Plugin | Domain | Command |
+|---|---|---|
+| **domain-driven-design** ⭐ | Bounded contexts, aggregates, value objects, domain events | `/ddd` |
+| system-design | High-level architecture, capacity planning, technology selection | `/system-design` |
+| microservices | Service boundaries, communication patterns, data ownership | `/microservices` |
+| monolith-patterns | Modular monolith, when monoliths win, when to split | `/monolith` |
+| event-driven | Event sourcing, event-carried state transfer, eventual consistency | `/event-driven` |
+| cqrs-event-sourcing | Command Query Responsibility Segregation patterns | `/cqrs` |
+| hexagonal-architecture | Ports and adapters, dependency direction | `/hex-arch` |
+| clean-architecture | Layered architecture, dependency rule, use cases | `/clean-arch` |
+| distributed-systems | CAP, consensus (Raft, Paxos), Byzantine fault tolerance | `/distributed` |
+| data-consistency | Strong vs eventual, saga patterns, 2PC, idempotency | `/consistency` |
+| saga-patterns | Choreography vs orchestration, compensation, failure recovery | `/saga` |
+| api-gateway | BFF, routing, auth, rate limiting at the edge | `/api-gateway` |
+| service-discovery | DNS-based, registry-based, sidecar (service mesh) | `/service-discovery` |
+| message-queues | Kafka, RabbitMQ, SQS, NATS — when each fits | `/message-queue` |
+| caching-strategies | Cache-aside, write-through, write-behind, invalidation | `/cache` |
+| circuit-breaker | Resilience patterns, bulkheads, timeouts, retries | `/circuit-breaker` |
+| database-patterns | Choice (RDBMS, document, K-V, graph, time-series), schema design | `/db-pattern` |
+| scalability-patterns | Horizontal vs vertical, partitioning, sharding, replication | `/scale` |
+| migration-strategies | Strangler fig, branch-by-abstraction, dark launching | `/migrate` |
+| architecture-decision-records | ADR format, when to write, decision logs | `/adr` |
 
 ⭐ = depth-complete. Remaining 19 shell-improved.
 
+Every plugin ships one agent, one slash command, and one skill: 20 agents, 20 commands, and 20 skills in all. A 21st plugin, `libre-arch-hooks`, is optional and adds hooks instead (see below).
+
 ## Quick start
+
+### Install from Claude Code
+
+```
+/plugin marketplace add HermeticOrmus/LibreArch-Claude-Code
+/plugin install domain-driven-design@libre-arch
+```
+
+The same from a terminal:
+
+```bash
+claude plugin marketplace add HermeticOrmus/LibreArch-Claude-Code
+claude plugin install domain-driven-design@libre-arch
+```
+
+Install as many plugins as you need, then restart Claude Code to load them. `/plugin` inside Claude Code opens the plugin manager, where you can browse the rest of the pack.
+
+### Install from a clone
 
 ```bash
 git clone https://github.com/HermeticOrmus/LibreArch-Claude-Code.git ~/projects/LibreArch-Claude-Code
@@ -55,11 +75,27 @@ cd ~/projects/LibreArch-Claude-Code
 ./setup.sh
 ```
 
+`./setup.sh` registers the clone as the `libre-arch` marketplace and installs all 21 plugins through the Claude Code CLI. `./setup.sh --list` shows them, `./setup.sh --only domain-driven-design,event-driven` installs a subset, and `./setup.sh --uninstall` removes them.
+
+### Optional hooks
+
+`libre-arch-hooks` prints a one-line architecture summary when a session starts, asks before Claude reads or edits `.env`, key, or secrets files, and scans each edited source file for dependency-direction violations. Add it with `/plugin install libre-arch-hooks@libre-arch`. Details: [plugins/libre-arch-hooks](plugins/libre-arch-hooks/README.md).
+
+### First prompt
+
 ```
 /ddd identify bounded contexts for a marketplace platform: sellers list inventory, buyers browse + purchase, finance processes payouts, customer support handles disputes. Where are the seams?
 ```
 
 See [QUICK_START.md](QUICK_START.md). Learning paths: [beginner](learning-paths/beginner.md), [intermediate](learning-paths/intermediate.md), [advanced](learning-paths/advanced.md).
+
+## Feedback
+
+Starred this? Tell us what worked and what is missing: [open a feedback issue](https://github.com/HermeticOrmus/LibreArch-Claude-Code/issues/new?template=feedback.yml). Every piece of feedback gets an answer, and changes that come from it are credited in the release notes.
+
+## Contributing
+
+PRs are welcome for plugin depth, architecture case studies, and language-specific examples. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
