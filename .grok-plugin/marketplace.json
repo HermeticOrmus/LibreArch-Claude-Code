@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Software architecture plugins for Claude Code: DDD, microservices, distributed systems, event-driven design, resilience, data, and migration patterns.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
